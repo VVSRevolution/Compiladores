@@ -1,8 +1,7 @@
 def scanner():
-
     file = open('code.txt', 'r')
     char = file.read(1)
-    print(char)
+    #print(char)
     
     if not char:
         return "EOF"
@@ -77,3 +76,6 @@ def scanner():
             return "menor"
         else:
             return f"ERROR \">{char}\" não conhecido"
+
+
+print(scanner())
