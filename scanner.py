@@ -73,7 +73,7 @@ def main():
             if token["classe"] == "id":
                 adicionarTabelaDeSimbolos(tabelaDeSimbolos, token)
 
-        if (token["classe"] != "ERRO"):
+        if (token["classe"] != "ERRO" and token["classe"] != "Comentario"):
             print(token)
         #print("Classe: " + token["classe"] + ", Lexema: " + token["lexema"] + ", Tipo: " + token["tipo"])
         
@@ -138,10 +138,16 @@ def scanner(file):
         lexema = char
         coluna +=1
         char = file.read(1)
+        
         while(char != '\"'):
-            char = file.read(1)
-            coluna +=1
             lexema += char
+            
+            if(char == '\n'):
+                coluna = 1
+                linha +=1
+            else:
+                coluna +=1
+            char = file.read(1)
             if not char:
                 return {"classe" : "ERRO", "lexema": lexema, "tipo":"NULO"}
         return {"classe" : "Lit", "lexema": lexema, "tipo":"Constante Literal"}
@@ -152,7 +158,11 @@ def scanner(file):
         lexema = ''
         while (char.isalpha() or char.isnumeric() or char =='_'):
             lexema += char
-            coluna += 1
+            if(char == '\n'):
+                coluna = 1
+                linha +=1
+            else:
+                coluna +=1
             char = file.read(1)
             
         
@@ -164,7 +174,11 @@ def scanner(file):
         lexema = char
         while(char != '}'):
             char = file.read(1)
-            coluna+=1
+            if(char == '\n'):
+                coluna = 1
+                linha +=1
+            else:
+                coluna +=1
             lexema += char
             if not char:
                 return {"classe" : "ERRO", "lexema": lexema, "tipo":"NULO"}
@@ -241,7 +255,8 @@ def adicionarTabelaDeSimbolos(tabelaDeSimbolos, token):
 if __name__ == "__main__":
     main()
 
-print("\n\nTabela de Simbolos\n\n")
+if False: 
+    print("\n\nTabela de Simbolos\n\n")
 
-for x in tabelaDeSimbolos:
-    print(x)
+    for x in tabelaDeSimbolos:
+        print(x)
