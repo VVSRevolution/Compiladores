@@ -20,9 +20,11 @@ def main():
     file = open('code.txt', 'r')
     global char,coluna,linha
     char = file.read(1)
-    while True:
+    token = ''
+    while (token != "EOF"):
         
         token = scanner(file)
+        if(token == "EOF"): break
 
         if (token["classe"] == "ERRO"):
             print(f"ERRO LÉXICO – Caractere inválido na linguagem, linha {linha}, coluna {coluna}")
@@ -75,37 +77,74 @@ def main():
             print(token)
         #print("Classe: " + token["classe"] + ", Lexema: " + token["lexema"] + ", Tipo: " + token["tipo"])
         
-        if token["lexema"] == "fim":
-            break
-
 
 
 def scanner(file):
     global char, linha, coluna
     while(char == '\t' or char == '\n' or char == ' '):
-        if(char == '\t' or char == '\n'):
+        if(char == '\n'):
             coluna = 1
             linha +=1
         else:
             coluna +=1
         char = file.read(1)
 
-    """
+    
     if(char.isnumeric()):
-        pass
-        #return token lexema tipo
+        lexema = char
+        coluna +=1
+        char = file.read(1)
+        Tipo = "inteiro"
+        while(char.isnumeric()):
+            lexema = char
+            coluna +=1
+            char = file.read(1)
+        if(char =="."):
+            Tipo = "real"
+            lexema = char
+            coluna +=1
+            char = file.read(1)
+            if not (char.isnumeric()):
+                return {"classe" : "ERRO", "lexema": lexema, "tipo":"NULO"}
+            while(char.isnumeric()):
+                lexema = char
+                coluna +=1
+                char = file.read(1)
 
-    """
+        if(char =="e" or char =="E"):
+            lexema = char
+            coluna +=1
+            char = file.read(1)
+        
+        if(char =="+" or char =="-"):
+            lexema = char
+            coluna +=1
+            char = file.read(1)
+            if not (char.isnumeric()):
+                return {"classe" : "ERRO", "lexema": lexema, "tipo":"NULO"}
+            while(char.isnumeric()):
+                lexema = char
+                coluna +=1
+                char = file.read(1)
+        while(char.isnumeric()):
+            lexema = char
+            coluna +=1
+            char = file.read(1)
+        return {"classe" : "Num", "lexema": lexema, "tipo":Tipo}
+
+        #return token lexema tipo
 
     if(char == '\"'):
         lexema = char
+        coluna +=1
         char = file.read(1)
         while(char != '\"'):
             char = file.read(1)
+            coluna +=1
             lexema += char
             if not char:
                 return {"classe" : "ERRO", "lexema": lexema, "tipo":"NULO"}
-        return {"classe" : "LIT", "lexema": lexema, "tipo":"Constante Literal"}
+        return {"classe" : "Lit", "lexema": lexema, "tipo":"Constante Literal"}
     
 
 
@@ -125,18 +164,15 @@ def scanner(file):
         lexema = char
         while(char != '}'):
             char = file.read(1)
-            linha+=1
+            coluna+=1
             lexema += char
             if not char:
                 return {"classe" : "ERRO", "lexema": lexema, "tipo":"NULO"}
         return {"classe" : "Comentario", "lexema": lexema, "tipo":"Comentario"}
-    
-    """
 
     if not char:
         return "EOF"
 
-    """
 
     if(char == '<'):
         char = file.read(1)
