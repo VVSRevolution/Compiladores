@@ -158,11 +158,7 @@ def scanner(file):
         lexema = ''
         while (char.isalpha() or char.isnumeric() or char =='_'):
             lexema += char
-            if(char == '\n'):
-                coluna = 1
-                linha +=1
-            else:
-                coluna +=1
+            coluna +=1
             char = file.read(1)
             
         
