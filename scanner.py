@@ -28,56 +28,23 @@ def main():
 
         if (token["classe"] == "ERRO"):
             print(f"ERRO LÉXICO – Caractere inválido na linguagem, linha {linha}, coluna {coluna}")
+
         if (token["classe"] != "id"):
             char = file.read(1)
             coluna+=1
         
-        if (buscaTabelaDeSimbolos(tabelaDeSimbolos, token)):
-            if token["lexema"] == "inicio":
-                token["classe"] = "inicio"
-                token["tipo"]   = "inicio"
-            elif token["lexema"] == "varinicio":
-                token["classe"] = "varinicio"
-                token["tipo"]   = "varinicio"
-            elif token["lexema"] == "varfim":
-                token["classe"] = "varfim"
-                token["tipo"]   = "varfim"
-            elif token["lexema"] == "escreva":
-                token["classe"] = "escreva"
-                token["tipo"]   = "escreva"
-            elif token["lexema"] == "leia":
-                token["classe"] = "leia"
-                token["tipo"]   = "leia"
-            elif token["lexema"] == "se":
-                token["classe"] = "se"
-                token["tipo"]   = "se"
-            elif token["lexema"] == "entao":
-                token["classe"] = "entao"
-                token["tipo"]   = "entao"
-            elif token["lexema"] == "fimse":
-                token["classe"] = "fimse"
-                token["tipo"]   = "fimse"
-            elif token["lexema"] == "fim":
-                token["classe"] = "fim"
-                token["tipo"]   = "fim"
-            elif token["lexema"] == "inteiro":
-                token["classe"] = "inteiro"
-                token["tipo"]   = "inteiro"
-            elif token["lexema"] == "literal":
-                token["classe"] = "literal"
-                token["tipo"]   = "literal"
-            elif token["lexema"] == "real":
-                token["classe"] = "real"
-                token["tipo"]   = "real"
-        else:
-            if token["classe"] == "id":
+        naTabela = buscaTabelaDeSimbolos(tabelaDeSimbolos, token)
+        if (naTabela != False):
+            
+            token["classe"] = naTabela["classe"]
+            token["tipo"]   = naTabela["tipo"]
+        elif (token["classe"] == "id"):
                 adicionarTabelaDeSimbolos(tabelaDeSimbolos, token)
 
         if (token["classe"] != "ERRO" and token["classe"] != "Comentario"):
             print(token)
         #print("Classe: " + token["classe"] + ", Lexema: " + token["lexema"] + ", Tipo: " + token["tipo"])
         
-
 
 def scanner(file):
     global char, linha, coluna
@@ -90,44 +57,44 @@ def scanner(file):
         char = file.read(1)
 
     
-    if(char.isnumeric()):
+    if(isNum(char)):
         lexema = char
         coluna +=1
         char = file.read(1)
         Tipo = "inteiro"
         while(char.isnumeric()):
-            lexema = char
+            lexema += char
             coluna +=1
             char = file.read(1)
         if(char =="."):
             Tipo = "real"
-            lexema = char
+            lexema += char
             coluna +=1
             char = file.read(1)
             if not (char.isnumeric()):
                 return {"classe" : "ERRO", "lexema": lexema, "tipo":"NULO"}
             while(char.isnumeric()):
-                lexema = char
+                lexema += char
                 coluna +=1
                 char = file.read(1)
-
+        #opicional
         if(char =="e" or char =="E"):
-            lexema = char
+            lexema += char
             coluna +=1
             char = file.read(1)
         
-        if(char =="+" or char =="-"):
-            lexema = char
-            coluna +=1
-            char = file.read(1)
+            if(char =="+" or char =="-"):
+                lexema += char
+                coluna +=1
+                char = file.read(1)
             if not (char.isnumeric()):
                 return {"classe" : "ERRO", "lexema": lexema, "tipo":"NULO"}
             while(char.isnumeric()):
-                lexema = char
+                lexema += char
                 coluna +=1
                 char = file.read(1)
         while(char.isnumeric()):
-            lexema = char
+            lexema += char
             coluna +=1
             char = file.read(1)
         return {"classe" : "Num", "lexema": lexema, "tipo":Tipo}
@@ -240,13 +207,18 @@ def buscaTabelaDeSimbolos(tabelaDeSimbolos, token):
         return False
     for x in tabelaDeSimbolos:
         if x["lexema"] == token["lexema"]:
-            return True
+            return x
 
     return False
 
 def adicionarTabelaDeSimbolos(tabelaDeSimbolos, token):
     tabelaDeSimbolos.append(token)
 
+def isNum(num):
+    if(num == '0' or num == '1' or num == '2' or num == '3' or num == '4' or num == '5' or num == '6' or num == '5' or num == '8' or num == '9'):
+        return True
+    else:
+        return False
 
 if __name__ == "__main__":
     main()
