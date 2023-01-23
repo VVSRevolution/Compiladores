@@ -16,34 +16,33 @@ linha = 1
 coluna = 1
 char = ''
 
-def main():
-    file = open('code.txt', 'r')
+def getToken(file):
+    
     global char,coluna,linha
     char = file.read(1)
     token = ''
-    while (token != "EOF"):
+
+    token = scanner(file)
+
+    if(token == "EOF" and token == None):
+        return token
+
+    if (token != "EOF" and token["classe"] != "id" ):
+        char = file.read(1)
+        coluna+=1
+    
+    naTabela = buscaTabelaDeSimbolos(tabelaDeSimbolos, token)
+    if (naTabela != False):
         
-        token = scanner(file)
-        if(token == "EOF"): break
+        token["classe"] = naTabela["classe"]
+        token["tipo"]   = naTabela["tipo"]
+    elif (token["classe"] == "id"):
+            adicionarTabelaDeSimbolos(tabelaDeSimbolos, token)
 
-        if (token["classe"] == "ERRO"):
-            print(f"ERRO LÉXICO – Caractere inválido na linguagem, linha {linha}, coluna {coluna}")
-
-        if (token["classe"] != "id"):
-            char = file.read(1)
-            coluna+=1
-        
-        naTabela = buscaTabelaDeSimbolos(tabelaDeSimbolos, token)
-        if (naTabela != False):
-            
-            token["classe"] = naTabela["classe"]
-            token["tipo"]   = naTabela["tipo"]
-        elif (token["classe"] == "id"):
-                adicionarTabelaDeSimbolos(tabelaDeSimbolos, token)
-
-        if (token["classe"] != "ERRO" and token["classe"] != "Comentario"):
-            print(token)
-        #print("Classe: " + token["classe"] + ", Lexema: " + token["lexema"] + ", Tipo: " + token["tipo"])
+    if (token["classe"] != "Comentario"):
+        #print(token)
+        return token
+    #print("Classe: " + token["classe"] + ", Lexema: " + token["lexema"] + ", Tipo: " + token["tipo"])
         
 
 def scanner(file):
@@ -199,12 +198,10 @@ def scanner(file):
     if(char == ','):
         return {"classe" : "VIR", "lexema": ",", "tipo":"Vírgula"}
     
-    return {"classe" : "ERRO", "lexema": char, "tipo":"NULO"}
+    print("[ERRO]\tCaracter não e valido.") 
       
 def buscaTabelaDeSimbolos(tabelaDeSimbolos, token):
 
-    if(token["classe"] == "ERRO"):
-        return False
     for x in tabelaDeSimbolos:
         if x["lexema"] == token["lexema"]:
             return x
@@ -220,8 +217,6 @@ def isNum(num):
     else:
         return False
 
-if __name__ == "__main__":
-    main()
 
 if False: 
     print("\n\nTabela de Simbolos\n\n")
