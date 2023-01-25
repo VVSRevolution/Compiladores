@@ -2,10 +2,10 @@ from scanner import *
 import pandas as pd
 
 PRINT_PILHA = False
-GET_ON_TABLE = False
-REDUCTION = True
-REDUCE = False 
-SHIFT = False
+GET_ON_TABLE = True
+REDUCTION = False
+REDUCE = True
+SHIFT = True
 gram = [
     ["P'", "P"],                #1
     ["P","inicio","V","A"],     #2
@@ -45,7 +45,7 @@ pilha = [0]
 def main():
 
     global pilha,gram
-    Tabela = pd.read_csv("Tabela.csv")
+    Tabela = pd.read_csv("Tabela2.csv")
     file = open('code.txt', 'r')
     token = getToken(file)
     #print(Tabela[["inteiro"]])
