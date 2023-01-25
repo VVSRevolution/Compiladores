@@ -1,7 +1,7 @@
 from scanner import *
 import pandas as pd
 
-PRINT_PILHA = False
+PRINT_PILHA = True
 GET_ON_TABLE = True
 REDUCTION = False
 gram = [
