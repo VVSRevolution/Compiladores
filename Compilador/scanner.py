@@ -48,6 +48,7 @@ def getToken(file):
 
     if (token["classe"] != "Comentario"):
         #print(token)
+
         return token
     #print("Classe: " + token["classe"] + ", Lexema: " + token["lexema"] + ", Tipo: " + token["tipo"])
         

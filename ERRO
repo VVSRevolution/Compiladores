@@ -1,0 +1,150 @@
+Shift 2
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2']
+Shift 4
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4']
+Shift 58
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'literal', 'lexema': 'literal', 'tipo': 'literal'}, '58']
+Reduce 11
+Shift 53
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}, '53']
+Reduce 8
+Shift 52
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}, 51.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, 61.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '52']
+Reduce 6
+True
+PT_V L
+[ERRO]  Tabela e gramatica não bate.
+True
+ID TIPO
+[ERRO]  Tabela e gramatica não bate.
+Shift 56
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, '56']
+Reduce 9
+Shift 53
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '53']
+Shift 54
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54']
+Shift 53
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54', {'classe': 'ID', 'lexema': 'D', 'tipo': 'nulo'}, '53']
+Shift 54
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54', {'classe': 'ID', 'lexema': 'D', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54']
+Shift 53
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54', {'classe': 'ID', 'lexema': 'D', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54', {'classe': 'ID', 'lexema': 'E', 'tipo': 'nulo'}, '53']
+Reduce 8
+Reduce 7
+True
+PT_V L
+[ERRO]  Tabela e gramatica não bate.
+Reduce 7
+True
+PT_V L
+[ERRO]  Tabela e gramatica não bate.
+Shift 52
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, 61.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '52']
+Reduce 6
+True
+PT_V L
+[ERRO]  Tabela e gramatica não bate.
+True
+ID TIPO
+[ERRO]  Tabela e gramatica não bate.
+Shift 57
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, '57']
+Reduce 10
+Shift 53
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, 48.0, {'classe': 'ID', 'lexema': 'C', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'C', 'tipo': 'nulo'}, '53']
+Reduce 8
+Shift 52
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, 48.0, {'classe': 'ID', 'lexema': 'C', 'tipo': 'nulo'}, 51.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, 61.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '52']
+Reduce 6
+True
+PT_V L
+[ERRO]  Tabela e gramatica não bate.
+True
+ID TIPO
+[ERRO]  Tabela e gramatica não bate.
+Shift 49
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, 48.0, {'classe': 'varfim', 'lexema': 'varfim', 'tipo': 'varfim'}, 48.0, {'classe': 'varfim', 'lexema': 'varfim', 'tipo': 'varfim'}, '49']
+Shift 50
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, 48.0, {'classe': 'varfim', 'lexema': 'varfim', 'tipo': 'varfim'}, 48.0, {'classe': 'varfim', 'lexema': 'varfim', 'tipo': 'varfim'}, '49', {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '50']
+Reduce 5
+Reduce 4
+True
+escreva LV
+[ERRO]  Tabela e gramatica não bate.
+True
+varfim D
+[ERRO]  Tabela e gramatica não bate.
+Reduce 4
+True
+escreva LV
+[ERRO]  Tabela e gramatica não bate.
+True
+real D
+[ERRO]  Tabela e gramatica não bate.
+Reduce 4
+True
+escreva LV
+[ERRO]  Tabela e gramatica não bate.
+True
+inteiro D
+[ERRO]  Tabela e gramatica não bate.
+Reduce 3
+True
+escreva LV
+[ERRO]  Tabela e gramatica não bate.
+True
+varinicio varincio
+[ERRO]  Tabela e gramatica não bate.
+Shift 10
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10']
+Shift 21
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10', {'classe': 'LIT', 'lexema': '"Digite B:', 'tipo': 'Constante Literal'}, '21']
+Reduce 15
+Shift 24
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10', {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, 20.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '24']
+Reduce 14
+True
+PT_V ARG
+[ERRO]  Tabela e gramatica não bate.
+Shift 9
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9']
+Shift 18
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9', {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '18']
+Shift 19
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9', {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '18', {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '19']
+Reduce 13
+Shift 10
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10']
+Shift 21
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10', {'classe': 'LIT', 'lexema': '"Digite A:', 'tipo': 'Constante Literal'}, '21']
+Reduce 15
+Shift 24
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10', {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, 20.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '24']
+Reduce 14
+True
+PT_V ARG
+[ERRO]  Tabela e gramatica não bate.
+Shift 9
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9']
+Shift 18
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9', {'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}, '18']
+Shift 19
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9', {'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}, '18', {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '19']
+Reduce 13
+Shift 13
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13']
+Shift 60
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60']
+Shift 39
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '39']
+Reduce 22
+Shift 45
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}, 42.0, {'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}, '45']
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}, 42.0, {'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}]
+Traceback (most recent call last):
+  File "/mnt/d/Git/Compiladores/Compilador/parser.py", line 95, in <module>
+    main()
+  File "/mnt/d/Git/Compiladores/Compilador/parser.py", line 58, in main
+    Action = Tabela.loc[int(UltimoPilha),token['classe']]
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'dict'
