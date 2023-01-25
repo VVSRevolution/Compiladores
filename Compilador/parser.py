@@ -1,9 +1,11 @@
 from scanner import *
 import pandas as pd
 
-PRINT_PILHA = True
-GET_ON_TABLE = True
-REDUCTION = False
+PRINT_PILHA = False
+GET_ON_TABLE = False
+REDUCTION = True
+REDUCE = False 
+SHIFT = False
 gram = [
     ["P'", "P"],                #1
     ["P","inicio","V","A"],     #2
@@ -67,7 +69,8 @@ def main():
         #print(Action)
         
         while(Action[0] == 'R'):
-            print(f"-->\t\tReduce {Action[1]}")
+            if(REDUCE):
+                print(f"-->\t\tReduce {Action[1]}")
 
             Gram = gram[int(Action[1]) - 1]
             if(REDUCTION):
@@ -111,7 +114,8 @@ def main():
             
         
         if(Action[0] == 'S'):
-            print(f"-->\t\tShift {Action[1]}")
+            if(SHIFT):
+                print(f"-->\t\tShift {Action[1]}")
             #print(f"UltimoPilha = {UltimoPilha}")
             if(UltimoPilha == 42):
                 pass
