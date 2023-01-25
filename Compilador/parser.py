@@ -46,6 +46,7 @@ def main():
     Tabela = pd.read_csv("Tabela.csv")
     file = open('code.txt', 'r')
     token = getToken(file)
+    #print(Tabela[["inteiro"]])
 
     #print(Tabela)
     while(token != "EOF"):
@@ -94,6 +95,8 @@ def main():
             NewToken = {"classe" : Gram[0], "lexema": lexema, "tipo":'?'} 
             pilha.append(NewToken)
             pilha.append(Tabela.loc[int(UltimoPilha),Gram[0]])
+            if(GET_ON_TABLE):
+                print(f"GET TABELA [{int(UltimoPilha)}] , [{Gram[0]} ] = {Tabela.loc[int(UltimoPilha),Gram[0]]}")
             
             if(PRINT_PILHA):
                 print(pilha)
@@ -103,6 +106,8 @@ def main():
             if(GET_ON_TABLE):
                 print(f"GET TABLELA [{UltimoPilha}] , [{token['classe'] }] = {Action}")
             Action = Action.split(".")
+            if(GET_ON_TABLE):
+                print(f"ACTION{Action}")
             
         
         if(Action[0] == 'S'):

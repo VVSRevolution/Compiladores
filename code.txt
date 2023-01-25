@@ -4,7 +4,7 @@ literal A;
 inteiro B, D;
 real C;
 varfim;
-escreva "Digite B:";ikjiu
+escreva "Digite B:";
 leia B;
 escreva "Digite A:";
 leia A;
