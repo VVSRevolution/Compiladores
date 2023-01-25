@@ -34,7 +34,7 @@ def getToken(file):
     if(token == "EOF"):
         return token
     
-    if (token["classe"] != "id" ):
+    if (token["classe"] != "ID" ):
         char = file.read(1)
         coluna+=1
     
@@ -43,7 +43,7 @@ def getToken(file):
     if (naTabela != False):
         token["classe"] = naTabela["classe"]
         token["tipo"]   = naTabela["tipo"]
-    elif (token["classe"] == "id"):
+    elif (token["classe"] == "ID"):
             adicionarTabelaDeSimbolos(tabelaDeSimbolos, token)
 
     if (token["classe"] != "Comentario"):
@@ -107,7 +107,7 @@ def scanner(file):
             lexema += char
             coluna +=1
             char = file.read(1)
-        return {"classe" : "Num", "lexema": lexema, "tipo":Tipo}
+        return {"classe" : "NUM", "lexema": lexema, "tipo":Tipo}
 
         #return token lexema tipo
 
@@ -129,7 +129,7 @@ def scanner(file):
                 lexema+=char
                 print(f"[ERRO]\t{lexema} não é valido, fim de arquivo sem fechar '\"'.")
                 return None
-        return {"classe" : "Lit", "lexema": lexema, "tipo":"Constante Literal"}
+        return {"classe" : "LIT", "lexema": lexema, "tipo":"Constante Literal"}
     
 
 
@@ -139,7 +139,7 @@ def scanner(file):
             lexema += char
             coluna +=1
             char = file.read(1)
-        return {"classe" : "id", "lexema" : lexema, "tipo" : "nulo"}
+        return {"classe" : "ID", "lexema" : lexema, "tipo" : "nulo"}
         #return token lexema tipo
 
     
