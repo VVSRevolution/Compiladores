@@ -6,12 +6,11 @@ def main():
     token = getToken(file)
 
     while(token != "EOF"):
-
-        print (token)
-
-        if(token == None): # None = ERRO
+        while(token == None):#comentario
             token = getToken(file)
-
+             
+        print (token)
+        
 
         #CODE
 
