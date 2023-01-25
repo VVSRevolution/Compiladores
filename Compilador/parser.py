@@ -1,11 +1,13 @@
 from scanner import *
 import pandas as pd
 
-
+PRINT_PILHA = False
+GET_ON_TABLE = True
+REDUCTION = False
 gram = [
     ["P'", "P"],                #1
     ["P","inicio","V","A"],     #2
-    ["V","varincio", "LV"],     #3
+    ["V","varinicio", "LV"],     #3
     ["LV","D","LV"],            #4
     ["LV","varfim","PT_V"],     #5
     ["D","TIPO","L","PT_V"],    #6
@@ -52,44 +54,74 @@ def main():
 
         UltimoPilha = pilha.pop()
 
-        #print(f"{UltimoPilha} , {token['classe'] }")
-
         #print(Tabela.loc[2,"varinicio"])
+
         Action = Tabela.loc[int(UltimoPilha),token['classe']]
         #print(Action)
-        
+        if(GET_ON_TABLE):
+            print(f"GET TABELA [{int(UltimoPilha)}] , [{token['classe'] }] = {Action}")
+
         Action = Action.split(".")
         #print (f"Action {Action}")
         #print(Action)
         
         while(Action[0] == 'R'):
-            print(f"Reduce {Action[1]}")
+            print(f"-->\t\tReduce {Action[1]}")
+
             Gram = gram[int(Action[1]) - 1]
-            #print(Gram)
+            if(REDUCTION):
+                print(f"Gram[{int(Action[1])}] - {Gram[0]} <-",end=' ')
+                for i in (range(1,len(Gram))):
+                    print(f"{Gram[i]}",end=' ')
+                print()
+
+            lexemaList = []
             for i in reversed(range(1,len(Gram))):
-                UltimoPilha = pilha.pop()
+                UltimoPilha = pilha.pop() # token
+                lexemaList.append(UltimoPilha['lexema'])
                 if((UltimoPilha['classe'] != Gram[i]) == True): 
                     print(UltimoPilha['classe'] != Gram[i])
-                    print(UltimoPilha['classe'] , Gram[i])
+                    print(f"{UltimoPilha['classe']}!={Gram[i]}.")
                 if(UltimoPilha['classe'] != Gram[i]):#!!!!!!!
                     print("[ERRO]\tTabela e gramatica não bate.")
-                UltimoPilha = pilha.pop()
+                UltimoPilha = pilha.pop() # num
+            lexema = ''
+            for i in reversed(range(1,len(Gram))):
+                lexema += lexemaList.pop(0)
+                lexema += ' '
+
             pilha.append(UltimoPilha)
-            pilha.append(token)
+            NewToken = {"classe" : Gram[0], "lexema": lexema, "tipo":'?'} 
+            pilha.append(NewToken)
             pilha.append(Tabela.loc[int(UltimoPilha),Gram[0]])
+            
+            if(PRINT_PILHA):
+                print(pilha)
 
             UltimoPilha = pilha.pop()
-            Action = Tabela.loc[UltimoPilha,token["classe"]]
+            Action = Tabela.loc[int(UltimoPilha),token['classe']]
+            if(GET_ON_TABLE):
+                print(f"GET TABLELA [{UltimoPilha}] , [{token['classe'] }] = {Action}")
             Action = Action.split(".")
+            
         
         if(Action[0] == 'S'):
-            print(f"Shift {Action[1]}")
-            pilha.append(UltimoPilha)
+            print(f"-->\t\tShift {Action[1]}")
+            #print(f"UltimoPilha = {UltimoPilha}")
+            if(UltimoPilha == 42):
+                pass
+            pilha.append(UltimoPilha)#!!!
             pilha.append(token)
             pilha.append(Action[1])
 
+        if(Action[0] != 'S' and Action[0] != 'R'):
+            print(pilha)
+            print(f"[ERRO] {Action} nao valida" )
+            pilha.pop()
+
         token = getToken(file)
-        print(pilha)
+        if(PRINT_PILHA):
+            print(pilha)
         
 if __name__ == "__main__":
     main()

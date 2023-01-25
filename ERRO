@@ -1,150 +1,265 @@
-Shift 2
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2']
-Shift 4
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4']
-Shift 58
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'literal', 'lexema': 'literal', 'tipo': 'literal'}, '58']
-Reduce 11
-Shift 53
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}, '53']
-Reduce 8
-Shift 52
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}, 51.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, 61.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '52']
-Reduce 6
-True
-PT_V L
-[ERRO]  Tabela e gramatica não bate.
-True
-ID TIPO
-[ERRO]  Tabela e gramatica não bate.
-Shift 56
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, '56']
-Reduce 9
-Shift 53
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '53']
-Shift 54
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54']
-Shift 53
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54', {'classe': 'ID', 'lexema': 'D', 'tipo': 'nulo'}, '53']
-Shift 54
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54', {'classe': 'ID', 'lexema': 'D', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54']
-Shift 53
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54', {'classe': 'ID', 'lexema': 'D', 'tipo': 'nulo'}, '53', {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}, '54', {'classe': 'ID', 'lexema': 'E', 'tipo': 'nulo'}, '53']
-Reduce 8
-Reduce 7
-True
-PT_V L
-[ERRO]  Tabela e gramatica não bate.
-Reduce 7
-True
-PT_V L
-[ERRO]  Tabela e gramatica não bate.
-Shift 52
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, 51.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, 61.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '52']
-Reduce 6
-True
-PT_V L
-[ERRO]  Tabela e gramatica não bate.
-True
-ID TIPO
-[ERRO]  Tabela e gramatica não bate.
-Shift 57
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, '57']
-Reduce 10
-Shift 53
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, 48.0, {'classe': 'ID', 'lexema': 'C', 'tipo': 'nulo'}, 51.0, {'classe': 'ID', 'lexema': 'C', 'tipo': 'nulo'}, '53']
-Reduce 8
-Shift 52
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, 48.0, {'classe': 'ID', 'lexema': 'C', 'tipo': 'nulo'}, 51.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, 61.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '52']
-Reduce 6
-True
-PT_V L
-[ERRO]  Tabela e gramatica não bate.
-True
-ID TIPO
-[ERRO]  Tabela e gramatica não bate.
-Shift 49
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, 48.0, {'classe': 'varfim', 'lexema': 'varfim', 'tipo': 'varfim'}, 48.0, {'classe': 'varfim', 'lexema': 'varfim', 'tipo': 'varfim'}, '49']
-Shift 50
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}, '4', {'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}, 48.0, {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}, 48.0, {'classe': 'varfim', 'lexema': 'varfim', 'tipo': 'varfim'}, 48.0, {'classe': 'varfim', 'lexema': 'varfim', 'tipo': 'varfim'}, '49', {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '50']
-Reduce 5
-Reduce 4
-True
-escreva LV
-[ERRO]  Tabela e gramatica não bate.
-True
-varfim D
-[ERRO]  Tabela e gramatica não bate.
-Reduce 4
-True
-escreva LV
-[ERRO]  Tabela e gramatica não bate.
-True
-real D
-[ERRO]  Tabela e gramatica não bate.
-Reduce 4
-True
-escreva LV
-[ERRO]  Tabela e gramatica não bate.
-True
-inteiro D
-[ERRO]  Tabela e gramatica não bate.
-Reduce 3
-True
-escreva LV
-[ERRO]  Tabela e gramatica não bate.
-True
-varinicio varincio
-[ERRO]  Tabela e gramatica não bate.
-Shift 10
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10']
-Shift 21
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10', {'classe': 'LIT', 'lexema': '"Digite B:', 'tipo': 'Constante Literal'}, '21']
-Reduce 15
-Shift 24
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10', {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, 20.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '24']
-Reduce 14
-True
-PT_V ARG
-[ERRO]  Tabela e gramatica não bate.
-Shift 9
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9']
-Shift 18
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9', {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '18']
-Shift 19
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9', {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '18', {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '19']
-Reduce 13
-Shift 10
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10']
-Shift 21
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10', {'classe': 'LIT', 'lexema': '"Digite A:', 'tipo': 'Constante Literal'}, '21']
-Reduce 15
-Shift 24
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, '10', {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, 20.0, {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '24']
-Reduce 14
-True
-PT_V ARG
-[ERRO]  Tabela e gramatica não bate.
-Shift 9
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9']
-Shift 18
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9', {'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}, '18']
-Shift 19
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, '9', {'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}, '18', {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}, '19']
-Reduce 13
-Shift 13
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13']
-Shift 60
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60']
-Shift 39
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '39']
-Reduce 22
-Shift 45
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}, 42.0, {'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}, '45']
-[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 3.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}, 6.0, {'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}, 42.0, {'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}]
-Traceback (most recent call last):
-  File "/mnt/d/Git/Compiladores/Compilador/parser.py", line 95, in <module>
-    main()
-  File "/mnt/d/Git/Compiladores/Compilador/parser.py", line 58, in main
-    Action = Tabela.loc[int(UltimoPilha),token['classe']]
-TypeError: int() argument must be a string, a bytes-like object or a real number, not 'dict'
+GET TABELA [0] , [inicio] = S.2
+-->             Shift 2
+GET TABELA [2] , [varinicio] = S.4
+-->             Shift 4
+GET TABELA [4] , [literal] = S.58
+-->             Shift 58
+GET TABELA [58] , [ID] = R.11
+-->             Reduce 11
+GET TABLELA [51.0] , [ID] = S.53
+-->             Shift 53
+GET TABELA [53] , [PT_V] = R.8
+-->             Reduce 8
+GET TABLELA [61.0] , [PT_V] = S.52
+-->             Shift 52
+GET TABELA [52] , [inteiro] = R.6
+-->             Reduce 6
+GET TABLELA [48.0] , [inteiro] = S.56
+-->             Shift 56
+GET TABELA [56] , [ID] = R.9
+-->             Reduce 9
+GET TABLELA [51.0] , [ID] = S.53
+-->             Shift 53
+GET TABELA [53] , [VIR] = S.54
+-->             Shift 54
+GET TABELA [54] , [ID] = S.53
+-->             Shift 53
+GET TABELA [53] , [PT_V] = R.8
+-->             Reduce 8
+GET TABLELA [55.0] , [PT_V] = R.7
+-->             Reduce 7
+GET TABLELA [61.0] , [PT_V] = S.52
+-->             Shift 52
+GET TABELA [52] , [real] = R.6
+-->             Reduce 6
+GET TABLELA [48.0] , [real] = S.57
+-->             Shift 57
+GET TABELA [57] , [ID] = R.10
+-->             Reduce 10
+GET TABLELA [51.0] , [ID] = S.53
+-->             Shift 53
+GET TABELA [53] , [PT_V] = R.8
+-->             Reduce 8
+GET TABLELA [61.0] , [PT_V] = S.52
+-->             Shift 52
+GET TABELA [52] , [varfim] = R.6
+-->             Reduce 6
+GET TABLELA [48.0] , [varfim] = S.49
+-->             Shift 49
+GET TABELA [49] , [PT_V] = S.50
+-->             Shift 50
+GET TABELA [50] , [escreva] = R.5
+-->             Reduce 5
+GET TABLELA [59.0] , [escreva] = R.4
+-->             Reduce 4
+GET TABLELA [59.0] , [escreva] = R.4
+-->             Reduce 4
+GET TABLELA [59.0] , [escreva] = R.4
+-->             Reduce 4
+GET TABLELA [47.0] , [escreva] = R.3
+-->             Reduce 3
+GET TABLELA [3.0] , [escreva] = S.10
+-->             Shift 10
+GET TABELA [10] , [LIT] = S.21
+-->             Shift 21
+GET TABELA [21] , [PT_V] = R.15
+-->             Reduce 15
+GET TABLELA [20.0] , [PT_V] = S.24
+-->             Shift 24
+GET TABELA [24] , [leia] = R.14
+-->             Reduce 14
+GET TABLELA [6.0] , [leia] = S.9
+-->             Shift 9
+GET TABELA [9] , [ID] = S.18
+-->             Shift 18
+GET TABELA [18] , [PT_V] = S.19
+-->             Shift 19
+GET TABELA [19] , [escreva] = R.13
+-->             Reduce 13
+GET TABLELA [6.0] , [escreva] = S.10
+-->             Shift 10
+GET TABELA [10] , [LIT] = S.21
+-->             Shift 21
+GET TABELA [21] , [PT_V] = R.15
+-->             Reduce 15
+GET TABLELA [20.0] , [PT_V] = S.24
+-->             Shift 24
+GET TABELA [24] , [leia] = R.14
+-->             Reduce 14
+GET TABLELA [6.0] , [leia] = S.9
+-->             Shift 9
+GET TABELA [9] , [ID] = S.18
+-->             Shift 18
+GET TABELA [18] , [PT_V] = S.19
+-->             Shift 19
+GET TABELA [19] , [se] = R.13
+-->             Reduce 13
+GET TABLELA [6.0] , [se] = S.13
+-->             Shift 13
+GET TABELA [13] , [AB_P] = S.60
+-->             Shift 60
+GET TABELA [60] , [ID] = S.39
+-->             Shift 39
+GET TABELA [39] , [OPR] = R.22
+-->             Reduce 22
+GET TABLELA [42.0] , [OPR] = S.45
+-->             Shift 45
+GET TABELA [45] , [FC_P] = E-ID-Numero
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; A leia ', 'tipo': '?'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}, 42.0, {'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}]
+[ERRO] ['E-ID-Numero'] nao valida
+GET TABELA [42] , [entao] = E-Operador relacional
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; A leia ', 'tipo': '?'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}]
+[ERRO] ['E-Operador relacional'] nao valida
+GET TABELA [60] , [se] = E-ID-Numero
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; A leia ', 'tipo': '?'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}]
+[ERRO] ['E-ID-Numero'] nao valida
+GET TABELA [13] , [AB_P] = S.60
+-->             Shift 60
+GET TABELA [60] , [ID] = S.39
+-->             Shift 39
+GET TABELA [39] , [OPR] = R.22
+-->             Reduce 22
+GET TABLELA [42.0] , [OPR] = S.45
+-->             Shift 45
+GET TABELA [45] , [NUM] = S.40
+-->             Shift 40
+GET TABELA [40] , [entao] = E-Ponto e virgula-Operador aritimetico-Fecha parenteses-Opr relacional
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; A leia ', 'tipo': '?'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}, 42.0, {'classe': 'OPR', 'lexema': '<=', 'tipo': 'Operador relacional'}, '45', {'classe': 'NUM', 'lexema': '4', 'tipo': 'inteiro'}]
+[ERRO] ['E-Ponto e virgula-Operador aritimetico-Fecha parenteses-Opr relacional'] nao valida
+GET TABELA [45] , [escreva] = E-ID-Numero
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; A leia ', 'tipo': '?'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}, 42.0, {'classe': 'OPR', 'lexema': '<=', 'tipo': 'Operador relacional'}]
+[ERRO] ['E-ID-Numero'] nao valida
+GET TABELA [42] , [LIT] = E-Operador relacional
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; A leia ', 'tipo': '?'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}, '60', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}]
+[ERRO] ['E-Operador relacional'] nao valida
+GET TABELA [60] , [PT_V] = E-ID-Numero
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; A leia ', 'tipo': '?'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}, '13', {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}]
+[ERRO] ['E-ID-Numero'] nao valida
+GET TABELA [13] , [fimse] = E-Abre Parenteses
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; A leia ', 'tipo': '?'}, 6.0, {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}]
+[ERRO] ['E-Abre Parenteses'] nao valida
+GET TABELA [6] , [fimse] = E-ID-leia-escreva-se-fim
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; A leia ', 'tipo': '?'}]
+[ERRO] ['E-ID-leia-escreva-se-fim'] nao valida
+GET TABELA [6] , [ID] = S.11
+-->             Shift 11
+GET TABELA [11] , [ATR] = S.25
+-->             Shift 25
+GET TABELA [25] , [ID] = S.39
+-->             Shift 39
+GET TABELA [39] , [OPA] = R.22
+-->             Reduce 22
+GET TABLELA [28.0] , [OPA] = S.29
+-->             Shift 29
+GET TABELA [29] , [NUM] = S.40
+-->             Shift 40
+GET TABELA [40] , [ID] = E-Ponto e virgula-Operador aritimetico-Fecha parenteses-Opr relacional
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '11', {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}, '25', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}, 28.0, {'classe': 'OPA', 'lexema': '+', 'tipo': 'Operador aritmético'}, '29', {'classe': 'NUM', 'lexema': '1', 'tipo': 'inteiro'}]
+[ERRO] ['E-Ponto e virgula-Operador aritimetico-Fecha parenteses-Opr relacional'] nao valida
+GET TABELA [29] , [ATR] = E-ID-Numero
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '11', {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}, '25', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}, 28.0, {'classe': 'OPA', 'lexema': '+', 'tipo': 'Operador aritmético'}]
+[ERRO] ['E-ID-Numero'] nao valida
+GET TABELA [28] , [ID] = E-Ponto e virgula-Operador Aritimetico
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '11', {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}, '25', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}]
+[ERRO] ['E-Ponto e virgula-Operador Aritimetico'] nao valida
+GET TABELA [25] , [OPA] = E-ID-Numero
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '11', {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}]
+[ERRO] ['E-ID-Numero'] nao valida
+GET TABELA [11] , [NUM] = E-Atribuicao
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}]
+[ERRO] ['E-Atribuicao'] nao valida
+GET TABELA [6] , [ID] = S.11
+-->             Shift 11
+GET TABELA [11] , [ATR] = S.25
+-->             Shift 25
+GET TABELA [25] , [ID] = S.39
+-->             Shift 39
+GET TABELA [39] , [OPA] = R.22
+-->             Reduce 22
+GET TABLELA [28.0] , [OPA] = S.29
+-->             Shift 29
+GET TABELA [29] , [NUM] = S.40
+-->             Shift 40
+GET TABELA [40] , [ID] = E-Ponto e virgula-Operador aritimetico-Fecha parenteses-Opr relacional
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '11', {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}, '25', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}, 28.0, {'classe': 'OPA', 'lexema': '+', 'tipo': 'Operador aritmético'}, '29', {'classe': 'NUM', 'lexema': '3', 'tipo': 'inteiro'}]
+[ERRO] ['E-Ponto e virgula-Operador aritimetico-Fecha parenteses-Opr relacional'] nao valida
+GET TABELA [29] , [ATR] = E-ID-Numero
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '11', {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}, '25', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}, 28.0, {'classe': 'OPA', 'lexema': '+', 'tipo': 'Operador aritmético'}]
+[ERRO] ['E-ID-Numero'] nao valida
+GET TABELA [28] , [ID] = E-Ponto e virgula-Operador Aritimetico
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '11', {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}, '25', {'classe': 'OPRD', 'lexema': 'B ', 'tipo': '?'}]
+[ERRO] ['E-Ponto e virgula-Operador Aritimetico'] nao valida
+GET TABELA [25] , [PT_V] = E-ID-Numero
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}, '11', {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}]
+[ERRO] ['E-ID-Numero'] nao valida
+GET TABELA [11] , [ID] = E-Atribuicao
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}]
+[ERRO] ['E-Atribuicao'] nao valida
+GET TABELA [6] , [ATR] = E-ID-leia-escreva-se-fim
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; "Digite A:  escreva ', 'tipo': '?'}]
+[ERRO] ['E-ID-leia-escreva-se-fim'] nao valida
+GET TABELA [6] , [NUM] = E-ID-leia-escreva-se-fim
+[0, {'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}, '2', {'classe': 'V', 'lexema': '; varfim  ; C  real    ; D  , B  inteiro    ; A  literal    varinicio ', 'tipo': '?'}, 3.0, {'classe': 'ES', 'lexema': '; "Digite B:  escreva ', 'tipo': '?'}, 6.0, {'classe': 'ES', 'lexema': '; B leia ', 'tipo': '?'}]
+[ERRO] ['E-ID-leia-escreva-se-fim'] nao valida
+GET TABELA [6] , [escreva] = S.10
+-->             Shift 10
+GET TABELA [10] , [LIT] = S.21
+-->             Shift 21
+GET TABELA [21] , [PT_V] = R.15
+-->             Reduce 15
+GET TABLELA [20.0] , [PT_V] = S.24
+-->             Shift 24
+GET TABELA [24] , [escreva] = R.14
+-->             Reduce 14
+GET TABLELA [6.0] , [escreva] = S.10
+-->             Shift 10
+GET TABELA [10] , [ID] = S.23
+-->             Shift 23
+GET TABELA [23] , [PT_V] = R.17
+-->             Reduce 17
+GET TABLELA [20.0] , [PT_V] = S.24
+-->             Shift 24
+GET TABELA [24] , [escreva] = R.14
+-->             Reduce 14
+GET TABLELA [6.0] , [escreva] = S.10
+-->             Shift 10
+GET TABELA [10] , [LIT] = S.21
+-->             Shift 21
+GET TABELA [21] , [PT_V] = R.15
+-->             Reduce 15
+GET TABLELA [20.0] , [PT_V] = S.24
+-->             Shift 24
+GET TABELA [24] , [escreva] = R.14
+-->             Reduce 14
+GET TABLELA [6.0] , [escreva] = S.10
+-->             Shift 10
+GET TABELA [10] , [ID] = S.23
+-->             Shift 23
+GET TABELA [23] , [PT_V] = R.17
+-->             Reduce 17
+GET TABLELA [20.0] , [PT_V] = S.24
+-->             Shift 24
+GET TABELA [24] , [escreva] = R.14
+-->             Reduce 14
+GET TABLELA [6.0] , [escreva] = S.10
+-->             Shift 10
+GET TABELA [10] , [LIT] = S.21
+-->             Shift 21
+GET TABELA [21] , [PT_V] = R.15
+-->             Reduce 15
+GET TABLELA [20.0] , [PT_V] = S.24
+-->             Shift 24
+GET TABELA [24] , [escreva] = R.14
+-->             Reduce 14
+GET TABLELA [6.0] , [escreva] = S.10
+-->             Shift 10
+GET TABELA [10] , [ID] = S.23
+-->             Shift 23
+GET TABELA [23] , [PT_V] = R.17
+-->             Reduce 17
+GET TABLELA [20.0] , [PT_V] = S.24
+-->             Shift 24
+GET TABELA [24] , [fim] = R.14
+-->             Reduce 14
+GET TABLELA [6.0] , [fim] = S.15
+-->             Shift 15

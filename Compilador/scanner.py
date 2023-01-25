@@ -15,7 +15,7 @@ tabelaDeSimbolos = [{"classe": "inicio", "lexema": "inicio", "tipo": "inicio"},
 linha = 1
 coluna = 1
 char = ''
-
+ 
 def getToken(file):
     
     global char,coluna,linha
