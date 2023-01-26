@@ -2,12 +2,12 @@ from scanner import *
 import pandas as pd
 
 PRINT_PILHA = False
-GET_ON_TABLE = False
-REDUCTION = False
+GET_ON_TABLE = True
+REDUCTION = True
 REDUCE = True
 SHIFT = True
 TOKEN = False
-FULL_PILHA = False
+FULL_PILHA = True
 gram = [
     ["P'", "P"],                #1
     ["P","inicio","V","A"],     #2
@@ -53,7 +53,7 @@ def scan(file):
 def main():
 
 
-    global pilha,gram
+    global pilha,gram,linha,coluna
     Tabela = pd.read_csv("Tabela.csv")
     file = open('code.txt', 'r')
     #scan(file)
@@ -74,13 +74,13 @@ def main():
                 print(f"TOKEN {token}")
 
         UltimoPilha = pilha.pop()
-
+        print(token)
         #print(Tabela.loc[2,"varinicio"])
-
+        if(GET_ON_TABLE):
+            print(f"GET TABELA [{UltimoPilha}] , [{token['classe'] }] ")
         Action = Tabela.loc[int(UltimoPilha),token['classe']]
         #print(Action)
-        if(GET_ON_TABLE):
-            print(f"GET TABELA [{int(Utoken = UltimoPilha)}] , [{token['classe'] }] = {Action}")
+        
 
         Action = Action.split(".")
         #print (f"Action {Action}")
@@ -115,9 +115,10 @@ def main():
             pilha.append(UltimoPilha)
             NewToken = {"classe" : Gram[0], "lexema": lexema, "tipo":'?'} 
             pilha.append(NewToken)
-            pilha.append(Tabela.loc[int(UltimoPilha),Gram[0]])
             if(GET_ON_TABLE):
                 print(f"GET TABELA [{int(UltimoPilha)}] , [{Gram[0]} ] = {Tabela.loc[int(UltimoPilha),Gram[0]]}")
+            
+            pilha.append(Tabela.loc[int(UltimoPilha),Gram[0]])
             
             if(PRINT_PILHA):
                 print(pilha)
@@ -135,16 +136,17 @@ def main():
             if(SHIFT):
                 print(f"-->\t\tShift {Action[1]}")
             #print(f"UltimoPilha = {UltimoPilha}")
-            if(UltimoPilha == 42):
-                pass
-            pilha.append(UltimoPilha)#!!!
+            pilha.append(UltimoPilha)
             pilha.append(token)
             pilha.append(Action[1])
 
         if(Action[0] != 'S' and Action[0] != 'R'):
-            print(pilha)
             print(f"[ERRO_P]\tLinha{linha}:Coluna{coluna}\t{Action} nao valida" )
-            pilha.pop()
+            if(Action[0] != "E"): 
+                #print(pilha)
+                pilha.pop()
+            else:
+                pilha.append(UltimoPilha)
 
         token = getToken(file)
         if(TOKEN):

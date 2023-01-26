@@ -15,7 +15,7 @@ tabelaDeSimbolos = [{"classe": "inicio", "lexema": "inicio", "tipo": "inicio"},
 linha = 1
 coluna = 1
 char = ''
-CHAR=True
+CHAR=False
  
 def getToken(file):
     
@@ -26,7 +26,7 @@ def getToken(file):
         if(CHAR): print(f"CHAR1 {char}")
     token = ''
     token = scanner(file)
-    print (f"TOKEN {token}")
+    #print (f"TOKEN {token}")
 
     if(token==None):
         char = file.read(1)
@@ -37,8 +37,8 @@ def getToken(file):
     if(token == "EOF"):
         return token
 
-    if (token["classe"] != "ID" and token != token["lexema"] != ">" and token != token["lexema"] != "<"):
-            print (token["lexema"])
+    if (token["classe"] != "ID" and token != token["lexema"] != ">" and token != token["lexema"] != "<" and token["classe"] != "NUM"):
+            #print (token["lexema"])
             char = file.read(1)
             if(CHAR): print(f"CHAR3 {char}")
             coluna+=1
@@ -52,7 +52,7 @@ def getToken(file):
             adicionarTabelaDeSimbolos(tabelaDeSimbolos, token)
 
     if (token["classe"] != "Comentario"):
-        print(token)
+        #print(token)
 
         return token
     #print("Classe: " + token["classe"] + ", Lexema: " + token["lexema"] + ", Tipo: " + token["tipo"])
@@ -72,13 +72,14 @@ def scanner(file):
     if(char == ';'):
         return {"classe" : "PT_V", "lexema": ";", "tipo":"Ponto e Vírgula"}
 
-    if(char.isnumeric()):
+    if(isNum(char)):
+        #print(char)
         lexema = char
         coluna +=1
         char = file.read(1)
         if(CHAR): print(f"CHAR5 {char}")
         Tipo = "inteiro"
-        while(char.isnumeric()):
+        while(isNum(char)):
             lexema += char
             coluna +=1
             char = file.read(1)
@@ -89,41 +90,41 @@ def scanner(file):
             coluna +=1
             char = file.read(1)
             if(CHAR): print(f"CHAR7 {char}")
-            if not (char.isnumeric()):
+            if not (isNum(char)):
                 lexema+=char
                 print(f"[ERRO]\tLinha{linha}:Coluna{coluna}\t{lexema} não é valido, dever tem número apois '.'")
                 return None
-            while(char.isnumeric()):
+            while(isNum(char)):
                 lexema += char
                 coluna +=1
                 char = file.read(1)
                 if(CHAR): print(f"CHAR8 {char}")
-        #opicional
-        if(char =="e" or char =="E"):
-            lexema += char
-            coluna +=1
-            char = file.read(1)
-            if(CHAR): print(f"CHAR9 {char}")
-        
-            if(char =="+" or char =="-"):
+            #opicional
+            if(char =="e" or char =="E"):
                 lexema += char
                 coluna +=1
                 char = file.read(1)
-                if(CHAR): print(f"CHAR10 {char}")
-            if not (char.isnumeric()):
-                lexema+=char
-                print(f"[ERRO]\tLinha{linha}:Coluna{coluna}\t{lexema} não é valido, dever tem número apois 'E'/'e' .")
-                return None
+                if(CHAR): print(f"CHAR9 {char}")
+            
+                if(char =="+" or char =="-"):
+                    lexema += char
+                    coluna +=1
+                    char = file.read(1)
+                    if(CHAR): print(f"CHAR10 {char}")
+                if not (char.isnumeric()):
+                    lexema+=char
+                    print(f"[ERRO]\tLinha{linha}:Coluna{coluna}\t{lexema} não é valido, dever tem número apois 'E'/'e' .")
+                    return None
+                while(char.isnumeric()):
+                    lexema += char
+                    coluna +=1
+                    char = file.read(1)
+                    if(CHAR): print(f"CHAR11 {char}")
             while(char.isnumeric()):
                 lexema += char
                 coluna +=1
                 char = file.read(1)
-                if(CHAR): print(f"CHAR11 {char}")
-        while(char.isnumeric()):
-            lexema += char
-            coluna +=1
-            char = file.read(1)
-            if(CHAR): print(f"CHAR12 {char}")
+                if(CHAR): print(f"CHAR12 {char}")
         return {"classe" : "NUM", "lexema": lexema, "tipo":Tipo}
 
         #return token lexema tipo

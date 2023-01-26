@@ -1,5 +1,5 @@
 inicio
-varinicio
+varinicio)
 literal A;
 inteiro B, D;
 real C;
