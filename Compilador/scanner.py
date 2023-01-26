@@ -15,28 +15,33 @@ tabelaDeSimbolos = [{"classe": "inicio", "lexema": "inicio", "tipo": "inicio"},
 linha = 1
 coluna = 1
 char = ''
+CHAR=True
  
 def getToken(file):
     
     global char,coluna,linha
 
     if(char==''):
-        char = file.read(1)
+        char = file.read(1) 
+        if(CHAR): print(f"CHAR1 {char}")
     token = ''
     token = scanner(file)
-    #print (f"TOKEN {token}")
+    print (f"TOKEN {token}")
 
     if(token==None):
         char = file.read(1)
+        if(CHAR): print(f"CHAR2 {char}")
         coluna+=1
         token = scanner(file)
 
     if(token == "EOF"):
         return token
-    
-    if (token["classe"] != "ID" ):
-        char = file.read(1)
-        coluna+=1
+
+    if (token["classe"] != "ID" and token != token["lexema"] != ">" and token != token["lexema"] != "<"):
+            print (token["lexema"])
+            char = file.read(1)
+            if(CHAR): print(f"CHAR3 {char}")
+            coluna+=1
     
     naTabela = buscaTabelaDeSimbolos(tabelaDeSimbolos, token)
     
@@ -47,7 +52,7 @@ def getToken(file):
             adicionarTabelaDeSimbolos(tabelaDeSimbolos, token)
 
     if (token["classe"] != "Comentario"):
-        #print(token)
+        print(token)
 
         return token
     #print("Classe: " + token["classe"] + ", Lexema: " + token["lexema"] + ", Tipo: " + token["tipo"])
@@ -62,52 +67,63 @@ def scanner(file):
         else:
             coluna +=1
         char = file.read(1)
+        if(CHAR): print(f"CHAR4 {char}")
 
-    
+    if(char == ';'):
+        return {"classe" : "PT_V", "lexema": ";", "tipo":"Ponto e Vírgula"}
+
     if(char.isnumeric()):
         lexema = char
         coluna +=1
         char = file.read(1)
+        if(CHAR): print(f"CHAR5 {char}")
         Tipo = "inteiro"
         while(char.isnumeric()):
             lexema += char
             coluna +=1
             char = file.read(1)
+            if(CHAR): print(f"CHAR6 {char}")
         if(char =="."):
             Tipo = "real"
             lexema += char
             coluna +=1
             char = file.read(1)
+            if(CHAR): print(f"CHAR7 {char}")
             if not (char.isnumeric()):
                 lexema+=char
-                print(f"[ERRO]\t{lexema} não é valido, dever tem número apois '.'")
+                print(f"[ERRO]\tLinha{linha}:Coluna{coluna}\t{lexema} não é valido, dever tem número apois '.'")
                 return None
             while(char.isnumeric()):
                 lexema += char
                 coluna +=1
                 char = file.read(1)
+                if(CHAR): print(f"CHAR8 {char}")
         #opicional
         if(char =="e" or char =="E"):
             lexema += char
             coluna +=1
             char = file.read(1)
+            if(CHAR): print(f"CHAR9 {char}")
         
             if(char =="+" or char =="-"):
                 lexema += char
                 coluna +=1
                 char = file.read(1)
+                if(CHAR): print(f"CHAR10 {char}")
             if not (char.isnumeric()):
                 lexema+=char
-                print(f"[ERRO]\t{lexema} não é valido, dever tem número apois 'E'/'e' .")
+                print(f"[ERRO]\tLinha{linha}:Coluna{coluna}\t{lexema} não é valido, dever tem número apois 'E'/'e' .")
                 return None
             while(char.isnumeric()):
                 lexema += char
                 coluna +=1
                 char = file.read(1)
+                if(CHAR): print(f"CHAR11 {char}")
         while(char.isnumeric()):
             lexema += char
             coluna +=1
             char = file.read(1)
+            if(CHAR): print(f"CHAR12 {char}")
         return {"classe" : "NUM", "lexema": lexema, "tipo":Tipo}
 
         #return token lexema tipo
@@ -116,6 +132,7 @@ def scanner(file):
         lexema = char
         coluna +=1
         char = file.read(1)
+        if(CHAR): print(f"CHAR13 {char}")
         
         while(char != '\"'):
             lexema += char
@@ -126,9 +143,10 @@ def scanner(file):
             else:
                 coluna +=1
             char = file.read(1)
+            if(CHAR): print(f"CHAR14 {char}")
             if not char:
                 lexema+=char
-                print(f"[ERRO]\t{lexema} não é valido, fim de arquivo sem fechar '\"'.")
+                print(f"[ERRO]\tLinha{linha}:Coluna{coluna}\t{lexema} não é valido, fim de arquivo sem fechar '\"'.")
                 return None
         return {"classe" : "LIT", "lexema": lexema, "tipo":"Constante Literal"}
     
@@ -140,6 +158,7 @@ def scanner(file):
             lexema += char
             coluna +=1
             char = file.read(1)
+            if(CHAR): print(f"CHAR15 {char}")
         return {"classe" : "ID", "lexema" : lexema, "tipo" : "nulo"}
         #return token lexema tipo
 
@@ -148,6 +167,7 @@ def scanner(file):
         lexema = char
         while(char != '}'):
             char = file.read(1)
+            if(CHAR): print(f"CHAR16 {char}")
             if(char == '\n'):
                 coluna = 1
                 linha +=1
@@ -156,7 +176,7 @@ def scanner(file):
             lexema += char
             if not char:
                 lexema+=char
-                print(f"[ERRO]\t{lexema} não é valido, fim de arquivo sem fechar '}}'.")
+                print(f"[ERRO]\tLinha{linha}:Coluna{coluna}\t{lexema} não é valido, fim de arquivo sem fechar '}}'.")
                 return None
         return {"classe" : "Comentario", "lexema": lexema, "tipo":"Comentario"}
 
@@ -167,6 +187,7 @@ def scanner(file):
     if(char == '<'):
         lexema = char
         char = file.read(1)
+        if(CHAR): print(f"CHAR17 {char}")
         coluna+=1
         if(char == '>'):
             lexema += char
@@ -178,13 +199,14 @@ def scanner(file):
             lexema += char
             return {"classe" : "ATR", "lexema": lexema, "tipo":"Atribuição"}
         else:
-            return {"classe" : "OPR", "lexema": lexema, "tipo":"Operador relacional"}
+            return {"classe" : "OPR", "lexema": "<", "tipo":"Operador relacional"}
 
     if(char == '='):
         return {"classe" : "OPR", "lexema": "=", "tipo":"Operador relacional"}
 
     if(char == '>'):
         char = file.read(1)
+        if(CHAR): print(f"CHAR18 {char}")
         coluna+=1
         if(char == '='):
             return {"classe" : "OPR", "lexema": ">=", "tipo":"Operador relacional"}
@@ -209,13 +231,12 @@ def scanner(file):
     if(char == ')'):
         return {"classe" : "FC_P", "lexema": ")", "tipo":"Fecha Parênteses"}
 
-    if(char == ';'):
-        return {"classe" : "PT_V", "lexema": ";", "tipo":"Ponto e Vírgula"}
+
 
     if(char == ','):
         return {"classe" : "VIR", "lexema": ",", "tipo":"Vírgula"}
     
-    print(f"[ERRO]\tCaracter '{char}' não é valido.") 
+    print(f"[ERRO]\tLinha{linha}:Coluna{coluna}\tCaracter '{char}' não é valido.") 
       
 def buscaTabelaDeSimbolos(tabelaDeSimbolos, token):
 

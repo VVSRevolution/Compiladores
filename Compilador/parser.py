@@ -2,14 +2,16 @@ from scanner import *
 import pandas as pd
 
 PRINT_PILHA = False
-GET_ON_TABLE = True
+GET_ON_TABLE = False
 REDUCTION = False
 REDUCE = True
 SHIFT = True
+TOKEN = False
+FULL_PILHA = False
 gram = [
     ["P'", "P"],                #1
     ["P","inicio","V","A"],     #2
-    ["V","varinicio", "LV"],     #3
+    ["V","varinicio","LV"],     #3
     ["LV","D","LV"],            #4
     ["LV","varfim","PT_V"],     #5
     ["D","TIPO","L","PT_V"],    #6
@@ -42,18 +44,34 @@ gram = [
 ]
 pilha = [0]
 
+def scan(file):
+    token = getToken(file)
+    while(token != "EOF"):
+        print(token)
+        token = getToken(file)
+
 def main():
 
+
     global pilha,gram
-    Tabela = pd.read_csv("Tabela2.csv")
+    Tabela = pd.read_csv("Tabela.csv")
     file = open('code.txt', 'r')
+    #scan(file)
+
     token = getToken(file)
+    if(TOKEN):
+        print(f"TOKEN {token}")
     #print(Tabela[["inteiro"]])
+
+    
 
     #print(Tabela)
     while(token != "EOF"):
+        
         while(token == None):#comentario
             token = getToken(file)
+            if(TOKEN):
+                print(f"TOKEN {token}")
 
         UltimoPilha = pilha.pop()
 
@@ -62,7 +80,7 @@ def main():
         Action = Tabela.loc[int(UltimoPilha),token['classe']]
         #print(Action)
         if(GET_ON_TABLE):
-            print(f"GET TABELA [{int(UltimoPilha)}] , [{token['classe'] }] = {Action}")
+            print(f"GET TABELA [{int(Utoken = UltimoPilha)}] , [{token['classe'] }] = {Action}")
 
         Action = Action.split(".")
         #print (f"Action {Action}")
@@ -125,12 +143,16 @@ def main():
 
         if(Action[0] != 'S' and Action[0] != 'R'):
             print(pilha)
-            print(f"[ERRO] {Action} nao valida" )
+            print(f"[ERRO_P]\tLinha{linha}:Coluna{coluna}\t{Action} nao valida" )
             pilha.pop()
 
         token = getToken(file)
-        if(PRINT_PILHA):
-            print(pilha)
+        if(TOKEN):
+            print(f"TOKEN {token}")
+        if(FULL_PILHA):
+            print()
+            print(*pilha, sep='\n')
+            print()
         
 if __name__ == "__main__":
     main()
