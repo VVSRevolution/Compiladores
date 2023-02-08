@@ -34,7 +34,7 @@ def getToken(file):
         coluna+=1
         token = scanner(file)
 
-    if(token == "EOF"):
+    if(token["classe"] == "EOF"):
         return token
 
     if (token["classe"] != "ID" and token != token["lexema"] != ">" and token != token["lexema"] != "<" and token["classe"] != "NUM"):
@@ -182,7 +182,8 @@ def scanner(file):
         return {"classe" : "Comentario", "lexema": lexema, "tipo":"Comentario"}
 
     if not char:
-        return "EOF"
+        return {"classe" : "EOF", "lexema": "EOF", "tipo":"EOF"}
+
 
 
     if(char == '<'):

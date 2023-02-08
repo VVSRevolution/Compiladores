@@ -1,12 +1,12 @@
 from scanner import *
 import pandas as pd
 
-PRINT_PILHA = False
+PRINT_PILHA = True
 GET_ON_TABLE = True
 REDUCTION = True
 REDUCE = True
 SHIFT = True
-TOKEN = False
+TOKEN = True
 FULL_PILHA = True
 gram = [
     ["P'", "P"],                #1
@@ -44,16 +44,10 @@ gram = [
 ]
 pilha = [0]
 
-def scan(file):
-    token = getToken(file)
-    while(token != "EOF"):
-        print(token)
-        token = getToken(file)
-
 def main():
 
 
-    global pilha,gram,linha,coluna
+    global pilha, gram, linha, coluna
     Tabela = pd.read_csv("Tabela.csv")
     file = open('code.txt', 'r')
     #scan(file)
@@ -66,19 +60,24 @@ def main():
     
 
     #print(Tabela)
-    while(token != "EOF"):
+    while(True):
         
+        if((token["classe"]=="EOF" and pilha[-1] == "0")):
+            break
+
+
         while(token == None):#comentario
             token = getToken(file)
             if(TOKEN):
                 print(f"TOKEN {token}")
 
         UltimoPilha = pilha.pop()
-        print(token)
+        
         #print(Tabela.loc[2,"varinicio"])
         if(GET_ON_TABLE):
-            print(f"GET TABELA [{UltimoPilha}] , [{token['classe'] }] ")
+            print(f"GET TABELA1 [{UltimoPilha}] , [{token['classe']}] = {Tabela.loc[int(UltimoPilha),token['classe']]} ")
         Action = Tabela.loc[int(UltimoPilha),token['classe']]
+        if Action == "acc": break
         #print(Action)
         
 
@@ -92,7 +91,7 @@ def main():
 
             Gram = gram[int(Action[1]) - 1]
             if(REDUCTION):
-                print(f"Gram[{int(Action[1])}] - {Gram[0]} <-",end=' ')
+                print(f">>>>>>>>>>>>>>>>> Gram[{int(Action[1])}] - {Gram[0]} <-",end=' ')
                 for i in (range(1,len(Gram))):
                     print(f"{Gram[i]}",end=' ')
                 print()
@@ -116,7 +115,7 @@ def main():
             NewToken = {"classe" : Gram[0], "lexema": lexema, "tipo":'?'} 
             pilha.append(NewToken)
             if(GET_ON_TABLE):
-                print(f"GET TABELA [{int(UltimoPilha)}] , [{Gram[0]} ] = {Tabela.loc[int(UltimoPilha),Gram[0]]}")
+                print(f"GET TABELA2 [{int(UltimoPilha)}] , [{Gram[0]} ] = {Tabela.loc[int(UltimoPilha),Gram[0]]}")
             
             pilha.append(Tabela.loc[int(UltimoPilha),Gram[0]])
             
@@ -125,8 +124,9 @@ def main():
 
             UltimoPilha = pilha.pop()
             Action = Tabela.loc[int(UltimoPilha),token['classe']]
+            if Action == "acc": break
             if(GET_ON_TABLE):
-                print(f"GET TABLELA [{UltimoPilha}] , [{token['classe'] }] = {Action}")
+                print(f"GET TABELA3 [{UltimoPilha}] , [{token['classe'] }] = {Action}")
             Action = Action.split(".")
             if(GET_ON_TABLE):
                 print(f"ACTION{Action}")
@@ -140,8 +140,9 @@ def main():
             pilha.append(token)
             pilha.append(Action[1])
 
+        if Action == "acc": break
         if(Action[0] != 'S' and Action[0] != 'R'):
-            print(f"[ERRO_P]\tLinha{linha}:Coluna{coluna}\t{Action} nao valida" )
+            print(f"[ERRO_P]\tLinha {linha} : Coluna {coluna}\t{Action} nao valida" )
             if(Action[0] != "E"): 
                 #print(pilha)
                 pilha.pop()
