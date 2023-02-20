@@ -257,9 +257,7 @@ def isNum(num):
     else:
         return False
 
+def getLinhaColuna():
+    global linha,coluna
 
-if False: 
-    print("\n\nTabela de Simbolos\n\n")
-
-    for x in tabelaDeSimbolos:
-        print(x)
+    return f"Linha[{linha}] : Colinha[{coluna}]"

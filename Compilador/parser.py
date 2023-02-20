@@ -1,13 +1,14 @@
 from scanner import *
 import pandas as pd
+import math
 
-PRINT_PILHA = True
-GET_ON_TABLE = True
-REDUCTION = True
-REDUCE = True
-SHIFT = True
-TOKEN = True
-FULL_PILHA = True
+PRINT_PILHA = False
+GET_ON_TABLE = False
+REDUCTION_GRAM = True
+REDUCE = False
+SHIFT = False
+TOKEN = False
+FULL_PILHA = False
 gram = [
     ["P'", "P"],                #1
     ["P","inicio","V","A"],     #2
@@ -47,8 +48,8 @@ pilha = [0]
 def main():
 
 
-    global pilha, gram, linha, coluna
-    Tabela = pd.read_csv("Tabela.csv")
+    global pilha, gram
+    Tabela = pd.read_csv("Tabela1.csv")
     file = open('code.txt', 'r')
     #scan(file)
 
@@ -76,11 +77,20 @@ def main():
         #print(Tabela.loc[2,"varinicio"])
         if(GET_ON_TABLE):
             print(f"GET TABELA1 [{UltimoPilha}] , [{token['classe']}] = {Tabela.loc[int(UltimoPilha),token['classe']]} ")
+        
         Action = Tabela.loc[int(UltimoPilha),token['classe']]
+        while pd.isnull(Tabela.loc[int(UltimoPilha),token['classe']]):
+            
+            print(f"[ERRO_PARSER]\t{getLinhaColuna()} -> SRL TABLE[{UltimoPilha}][{token['classe']}] = {Action}, A sintaxe não valida, ferifique o Token: {token}" )
+            token = getToken(file)
+            if(GET_ON_TABLE):
+                print(f"GET TABELA1 [{UltimoPilha}] , [{token['classe']}] = {Tabela.loc[int(UltimoPilha),token['classe']]} ")
+            Action = Tabela.loc[int(UltimoPilha),token['classe']]
+
         if Action == "acc": break
         #print(Action)
         
-
+        
         Action = Action.split(".")
         #print (f"Action {Action}")
         #print(Action)
@@ -89,9 +99,9 @@ def main():
             if(REDUCE):
                 print(f"-->\t\tReduce {Action[1]}")
 
-            Gram = gram[int(Action[1]) - 1]
-            if(REDUCTION):
-                print(f">>>>>>>>>>>>>>>>> Gram[{int(Action[1])}] - {Gram[0]} <-",end=' ')
+            Gram = gram[int(Action[1])]
+            if(REDUCTION_GRAM):
+                print(f">>>>>>>>>>>>>>>>> Gram[{int(Action[1])}] - {Gram[0]} ->",end=' ')
                 for i in (range(1,len(Gram))):
                     print(f"{Gram[i]}",end=' ')
                 print()
@@ -124,6 +134,14 @@ def main():
 
             UltimoPilha = pilha.pop()
             Action = Tabela.loc[int(UltimoPilha),token['classe']]
+
+            while pd.isnull(Tabela.loc[int(UltimoPilha),token['classe']]):
+                print(f"[ERRO_PARSER]\t{getLinhaColuna()} -> SRL TABLE[{UltimoPilha}][{token['classe']}] = {Action}, A sintaxe não valida, verifique o Token: {token}" )
+                token = getToken(file)
+                if(GET_ON_TABLE):
+                    print(f"GET TABELA1 [{UltimoPilha}] , [{token['classe']}] = {Tabela.loc[int(UltimoPilha),token['classe']]} ")
+                Action = Tabela.loc[int(UltimoPilha),token['classe']]
+
             if Action == "acc": break
             if(GET_ON_TABLE):
                 print(f"GET TABELA3 [{UltimoPilha}] , [{token['classe'] }] = {Action}")
@@ -142,12 +160,8 @@ def main():
 
         if Action == "acc": break
         if(Action[0] != 'S' and Action[0] != 'R'):
-            print(f"[ERRO_P]\tLinha {linha} : Coluna {coluna}\t{Action} nao valida" )
-            if(Action[0] != "E"): 
-                #print(pilha)
-                pilha.pop()
-            else:
-                pilha.append(UltimoPilha)
+            print(f"[ERRO_PARSER]\t{getLinhaColuna()}\t{Action} nao valida" )
+            pilha.append(UltimoPilha)
 
         token = getToken(file)
         if(TOKEN):
