@@ -28,7 +28,7 @@ def getToken(file):
     token = scanner(file)
     #print (f"TOKEN {token}")
 
-    if(token==None):
+    while(token==None):
         char = file.read(1)
         if(CHAR): print(f"CHAR2 {char}")
         coluna+=1
@@ -239,6 +239,8 @@ def scanner(file):
         return {"classe" : "VIR", "lexema": ",", "tipo":"Vírgula"}
     
     print(f"[ERRO]\tLinha{linha}:Coluna{coluna}\tCaracter '{char}' não é valido.") 
+
+    return(None)
       
 def buscaTabelaDeSimbolos(tabelaDeSimbolos, token):
 
