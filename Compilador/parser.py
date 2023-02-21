@@ -1,6 +1,6 @@
 from scanner import *
+from objeto import *
 import pandas as pd
-import math
 
 PRINT_PILHA = False
 GET_ON_TABLE = False
@@ -100,8 +100,11 @@ def main():
                 print(f"-->\t\tReduce {Action[1]}")
 
             Gram = gram[int(Action[1])]
+
+            makeObj(int(Action[1])+1)
+
             if(REDUCTION_GRAM):
-                print(f">>>>>>>>>>>>>>>>> Gram[{int(Action[1])}] - {Gram[0]} ->",end=' ')
+                print(f">>>>>>>>>>>>>>>>> Gram[{int(Action[1])+1}] - {Gram[0]} ->",end=' ')
                 for i in (range(1,len(Gram))):
                     print(f"{Gram[i]}",end=' ')
                 print()
@@ -174,3 +177,6 @@ def main():
 if __name__ == "__main__":
     main()
     #print(pilha)
+
+
+
