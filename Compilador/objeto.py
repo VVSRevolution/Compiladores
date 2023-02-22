@@ -84,19 +84,19 @@ def makeObj(gramNum,token):
             print(f"[ERRO_LEXEMA]\t{getLinhaColuna()}  Variável {token[1]} não conhecido" )
 
     if(gramNum==14):###### arrumar bug do "  ## arrumar bug print variavel
-        print (token)
-        file.write(f"\tprintf({token[1]}\");\n") 
+        #print (token)
+        file.write(f"\tprintf(\"{token[1]}\");\n") 
 
     if(gramNum==15):
-        print(token)
+        #print(token)
         file.write("")
 
     if(gramNum==16):
-        print(token)
+        #print(token)
         file.write("")
     
     if(gramNum==17): # fazer erro
-        print(token)
+        #print(token)
         file.write("")
 
     if(gramNum==19): # fazer erro
@@ -115,11 +115,14 @@ def makeObj(gramNum,token):
         file.write("")
 
     if(gramNum==25):
-        file.write("")
-        file.write("}")
+        file.write("\t}\n")
 
     if(gramNum==26):
-        file.write("")
+        print(token)
+        file.write("\tif( ")
+        for i in (range(2,len(token)-1)):   
+            file.write(f"{token[i] } ")
+        file.write("{\n")
     
     if(gramNum==27): # fazer erro
         file.write("")
@@ -131,7 +134,7 @@ def makeObj(gramNum,token):
         file.write("")
 
     if(gramNum==32): ############  E
-        file.write("")
+        file.write("}")
         
 
 
