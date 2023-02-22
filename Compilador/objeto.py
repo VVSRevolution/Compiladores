@@ -1,9 +1,22 @@
+from scanner import *
+
+varInt  = []
+varDouble  = []
+varLit = []
+
+def listVar():
+    global varInt, varDouble, varLit
+    print(f"int{varInt}")
+    print(f"double{varDouble}")
+    print(f"lit{varLit}")
 
 def iniciaObj():
     file = open('code.c', 'a')
     file.write("#include<stdio.h>\ntypedef char literal[256];\nvoid main(void){\n")
 
 def makeObj(gramNum,token):
+
+    global varInt, varDouble, varLit
     file = open('code.c', 'a')
 
     if(gramNum==5):
@@ -11,13 +24,31 @@ def makeObj(gramNum,token):
 
     if(gramNum==6): ############  A
         file.write(f";\n")
+        #print (token)
+    #if False:
+        if (token[0] == "literal"):
+            #print("lit")
+            for i in (range(1,len(token),2)):
+                varLit.append(token[i])
+                #print(token[i])
+        if (token[0] == "real"):
+            #print("real")
+            for i in (range(1,len(token),2)):
+                varDouble.append(token[i])
+                #print(token[i])
+        if (token[0] == "inteiro"):
+            #print("int")
+            for i in (range(1,len(token),2)):
+                varInt.append(token[i])
+                #print(token[i])
+        
     
-    if(gramNum==7): ############  B
+    if(gramNum==7): ############  B !!!!!!!!!! nao printa o inteiro B arumar no 5
         file.write("")
 
     if(gramNum==8): ############  C
-        file.write("")
-        file.write(f"{token}")
+        print (token)
+        file.write(f"\t{token[0]}")
 
     if(gramNum==9):
         file.write("\tint ")
@@ -26,13 +57,12 @@ def makeObj(gramNum,token):
         file.write("\tdouble ")
 
     if(gramNum==11):
-        file.write(f"\t{token}")
-
-    if(gramNum==12):
-        file.write("")
+        #print ( token)
+        file.write(f"\t{token[0]}")
     
     if(gramNum==13):
         file.write("")
+        file.write(f"\t(13){token}")
 
     if(gramNum==14):
         file.write("")

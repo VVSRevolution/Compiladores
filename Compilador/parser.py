@@ -2,13 +2,13 @@ from scanner import *
 from objeto import *
 import pandas as pd
 
-PRINT_PILHA = False
+PRINT_PILHA = True
 GET_ON_TABLE = False
 REDUCTION_GRAM = True
 REDUCE = False
 SHIFT = False
 TOKEN = False
-FULL_PILHA = False
+FULL_PILHA = True
 LEXEMA = False
 gram = [
     ["P'", "P"],                #1
@@ -59,12 +59,11 @@ def main():
         print(f"TOKEN {token}")
     #print(Tabela[["inteiro"]])
 
-    
-
     #print(Tabela)
     while(True):
         
         if((token["classe"]=="EOF" and pilha[-1] == "0")):
+            listVar()
             break
 
 
@@ -88,7 +87,9 @@ def main():
                 print(f"GET TABELA1 [{UltimoPilha}] , [{token['classe']}] = {Tabela.loc[int(UltimoPilha),token['classe']]} ")
             Action = Tabela.loc[int(UltimoPilha),token['classe']]
 
-        if Action == "acc": break
+        if Action == "acc":
+            listVar()
+            break
         #print(Action)
         
         
@@ -110,10 +111,10 @@ def main():
                 
             
             lexemaList = []
-
+            lexemaListTemp = []
             for i in reversed(range(1,len(Gram))):
                 UltimoPilha = pilha.pop() # token
-                lexemaList.append(UltimoPilha['lexema'])
+                lexemaListTemp.append(UltimoPilha['lexema'])
 
                 if((UltimoPilha['classe'] != Gram[i]) == True): 
                     print(UltimoPilha['classe'] != Gram[i])
@@ -122,23 +123,33 @@ def main():
                     print("[ERRO]\tTabela e gramatica não bate.")
                 UltimoPilha = pilha.pop() # num
             lexema = ''
-            lexemaListTemp = []
+            
             for i in reversed(range(1,len(Gram))):
-                lexemaListTemp.append(lexemaList.pop())
-            lexemaList = lexemaListTemp
+                lexemaList.append(lexemaListTemp.pop())
 
-            for i in (range(1,len(Gram))):
-                lexema += lexemaList.pop(0)
-                #lexema += ' '
+            #tempList = lexemaList.copy()
+            tempList = []
+            #tempList = [item for sublist in lexemaList for item in sublist]
+            for A in lexemaList:
+                if (type(A) == list):
+                    for item in A:
+                        tempList.append(item)
+                else: 
+                    tempList.append(A)
+
+            #print(f"templist{tempList}")
 
             if(LEXEMA):
-                print(lexema)
+                print(tempList)
+                print()
 #################### OBJ
-            makeObj(int(Action[1])+1,lexema)
+            makeObj(int(Action[1])+1,tempList)
+            #print(tempList)
 
+            
 
             pilha.append(UltimoPilha)
-            NewToken = {"classe" : Gram[0], "lexema": lexema, "tipo":'?'} 
+            NewToken = {"classe" : Gram[0], "lexema": tempList, "tipo":'?'} 
             pilha.append(NewToken)
             if(GET_ON_TABLE):
                 print(f"GET TABELA2 [{int(UltimoPilha)}] , [{Gram[0]} ] = {Tabela.loc[int(UltimoPilha),Gram[0]]}")
@@ -158,7 +169,9 @@ def main():
                     print(f"GET TABELA1 [{UltimoPilha}] , [{token['classe']}] = {Tabela.loc[int(UltimoPilha),token['classe']]} ")
                 Action = Tabela.loc[int(UltimoPilha),token['classe']]
 
-            if Action == "acc": break
+            if Action == "acc":
+                listVar() 
+                break
             if(GET_ON_TABLE):
                 print(f"GET TABELA3 [{UltimoPilha}] , [{token['classe'] }] = {Action}")
             Action = Action.split(".")
@@ -174,7 +187,9 @@ def main():
             pilha.append(token)
             pilha.append(Action[1])
 
-        if Action == "acc": break
+        if Action == "acc":
+            listVar()
+            break
         if(Action[0] != 'S' and Action[0] != 'R'):
             print(f"[ERRO_PARSER]\t{getLinhaColuna()}\t{Action} nao valida" )
             pilha.append(UltimoPilha)
