@@ -16,7 +16,9 @@ linha = 1
 coluna = 1
 char = ''
 CHAR=False
- 
+
+fileToken = open('tokens.txt', 'w')
+
 def getToken(file):
     
     global char,coluna,linha
@@ -53,7 +55,7 @@ def getToken(file):
 
     if (token["classe"] != "Comentario"):
         #print(token)
-
+        fileToken.write(f"{token}\n")
         return token
     #print("Classe: " + token["classe"] + ", Lexema: " + token["lexema"] + ", Tipo: " + token["tipo"])
         
@@ -130,7 +132,7 @@ def scanner(file):
         #return token lexema tipo
 
     if(char == '\"'):
-        lexema = char
+        lexema = ''
         coluna +=1
         char = file.read(1)
         if(CHAR): print(f"CHAR13 {char}")
@@ -263,3 +265,16 @@ def getLinhaColuna():
     global linha,coluna
 
     return f"Linha[{linha}] : Colinha[{coluna}]"
+
+def returnTabeladesimbulo():
+    global tabelaDeSimbolos
+    print(tabelaDeSimbolos)
+
+def modTabelaDeSimbolosTipo(lexema,tipo):
+    global tabelaDeSimbolos
+    for x in tabelaDeSimbolos:
+        
+        if x["lexema"] == lexema:
+            x["tipo"] = tipo
+            return True
+    return False

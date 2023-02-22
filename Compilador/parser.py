@@ -204,6 +204,7 @@ def main():
         
 if __name__ == "__main__":
     main()
+    returnTabeladesimbulo()
     #print(pilha)
 
 

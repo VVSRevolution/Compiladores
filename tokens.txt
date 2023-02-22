@@ -1,0 +1,91 @@
+{'classe': 'inicio', 'lexema': 'inicio', 'tipo': 'inicio'}
+{'classe': 'varinicio', 'lexema': 'varinicio', 'tipo': 'varinicio'}
+{'classe': 'literal', 'lexema': 'literal', 'tipo': 'literal'}
+{'classe': 'ID', 'lexema': 'A', 'tipo': 'nulo'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'inteiro', 'lexema': 'inteiro', 'tipo': 'inteiro'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}
+{'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}
+{'classe': 'ID', 'lexema': 'D', 'tipo': 'nulo'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'real', 'lexema': 'real', 'tipo': 'real'}
+{'classe': 'ID', 'lexema': 'C', 'tipo': 'nulo'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'varfim', 'lexema': 'varfim', 'tipo': 'varfim'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
+{'classe': 'LIT', 'lexema': 'Digite B:', 'tipo': 'Constante Literal'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
+{'classe': 'LIT', 'lexema': 'Digite A:', 'tipo': 'Constante Literal'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'leia', 'lexema': 'leia', 'tipo': 'leia'}
+{'classe': 'ID', 'lexema': 'A', 'tipo': 'literal'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'se', 'lexema': 'se', 'tipo': 'se'}
+{'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
+{'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}
+{'classe': 'NUM', 'lexema': '2', 'tipo': 'inteiro'}
+{'classe': 'FC_P', 'lexema': ')', 'tipo': 'Fecha Parênteses'}
+{'classe': 'entao', 'lexema': 'entao', 'tipo': 'entao'}
+{'classe': 'se', 'lexema': 'se', 'tipo': 'se'}
+{'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
+{'classe': 'OPR', 'lexema': '<=', 'tipo': 'Operador relacional'}
+{'classe': 'NUM', 'lexema': '4', 'tipo': 'inteiro'}
+{'classe': 'FC_P', 'lexema': ')', 'tipo': 'Fecha Parênteses'}
+{'classe': 'entao', 'lexema': 'entao', 'tipo': 'entao'}
+{'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
+{'classe': 'LIT', 'lexema': 'B esta entre 2 e 4', 'tipo': 'Constante Literal'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'fimse', 'lexema': 'fimse', 'tipo': 'fimse'}
+{'classe': 'fimse', 'lexema': 'fimse', 'tipo': 'fimse'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
+{'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
+{'classe': 'OPA', 'lexema': '+', 'tipo': 'Operador aritmético'}
+{'classe': 'NUM', 'lexema': '1', 'tipo': 'inteiro'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
+{'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
+{'classe': 'OPA', 'lexema': '+', 'tipo': 'Operador aritmético'}
+{'classe': 'NUM', 'lexema': '2', 'tipo': 'inteiro'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
+{'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
+{'classe': 'OPA', 'lexema': '+', 'tipo': 'Operador aritmético'}
+{'classe': 'NUM', 'lexema': '3', 'tipo': 'inteiro'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'ID', 'lexema': 'D', 'tipo': 'inteiro'}
+{'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}
+{'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'ID', 'lexema': 'C', 'tipo': 'real'}
+{'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}
+{'classe': 'NUM', 'lexema': '5.0', 'tipo': 'real'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
+{'classe': 'LIT', 'lexema': '\\nB=\\n', 'tipo': 'Constante Literal'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
+{'classe': 'ID', 'lexema': 'D', 'tipo': 'inteiro'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
+{'classe': 'LIT', 'lexema': '\\n', 'tipo': 'Constante Literal'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
+{'classe': 'ID', 'lexema': 'C', 'tipo': 'real'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
+{'classe': 'LIT', 'lexema': '\\n', 'tipo': 'Constante Literal'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
+{'classe': 'ID', 'lexema': 'A', 'tipo': 'literal'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'fim', 'lexema': 'fim', 'tipo': 'fim'}
