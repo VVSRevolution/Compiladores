@@ -9,6 +9,7 @@ REDUCE = False
 SHIFT = False
 TOKEN = False
 FULL_PILHA = False
+LEXEMA = False
 gram = [
     ["P'", "P"],                #1
     ["P","inicio","V","A"],     #2
@@ -47,7 +48,7 @@ pilha = [0]
 
 def main():
 
-
+    iniciaObj()
     global pilha, gram
     Tabela = pd.read_csv("Tabela1.csv")
     file = open('code.txt', 'r')
@@ -100,19 +101,20 @@ def main():
                 print(f"-->\t\tReduce {Action[1]}")
 
             Gram = gram[int(Action[1])]
-
-            makeObj(int(Action[1])+1)
-
+            
             if(REDUCTION_GRAM):
                 print(f">>>>>>>>>>>>>>>>> Gram[{int(Action[1])+1}] - {Gram[0]} ->",end=' ')
                 for i in (range(1,len(Gram))):
                     print(f"{Gram[i]}",end=' ')
                 print()
-
+                
+            
             lexemaList = []
+
             for i in reversed(range(1,len(Gram))):
                 UltimoPilha = pilha.pop() # token
                 lexemaList.append(UltimoPilha['lexema'])
+
                 if((UltimoPilha['classe'] != Gram[i]) == True): 
                     print(UltimoPilha['classe'] != Gram[i])
                     print(f"{UltimoPilha['classe']}!={Gram[i]}.")
@@ -120,9 +122,20 @@ def main():
                     print("[ERRO]\tTabela e gramatica não bate.")
                 UltimoPilha = pilha.pop() # num
             lexema = ''
+            lexemaListTemp = []
             for i in reversed(range(1,len(Gram))):
+                lexemaListTemp.append(lexemaList.pop())
+            lexemaList = lexemaListTemp
+
+            for i in (range(1,len(Gram))):
                 lexema += lexemaList.pop(0)
-                lexema += ' '
+                #lexema += ' '
+
+            if(LEXEMA):
+                print(lexema)
+#################### OBJ
+            makeObj(int(Action[1])+1,lexema)
+
 
             pilha.append(UltimoPilha)
             NewToken = {"classe" : Gram[0], "lexema": lexema, "tipo":'?'} 
