@@ -31,41 +31,54 @@ def makeObj(gramNum,token):
             for i in (range(1,len(token),2)):
                 varLit.append(token[i])
                 #print(token[i])
-        if (token[0] == "real"):
+        elif (token[0] == "real"):
             #print("real")
             for i in (range(1,len(token),2)):
                 varDouble.append(token[i])
                 #print(token[i])
-        if (token[0] == "inteiro"):
+        elif (token[0] == "inteiro"):
             #print("int")
             for i in (range(1,len(token),2)):
                 varInt.append(token[i])
                 #print(token[i])
+        else:
+            print(f"[ERRO_LEXEMA]\t{getLinhaColuna()} Tipo {token[0]} não conhecido" )
         
     
     if(gramNum==7): ############  B !!!!!!!!!! nao printa o inteiro B arumar no 5
         file.write("")
 
     if(gramNum==8): ############  C
-        print (token)
+        #print (token)
         file.write(f"\t{token[0]}")
 
     if(gramNum==9):
+        
         file.write("\tint ")
 
     if(gramNum==10):
+        
         file.write("\tdouble ")
 
     if(gramNum==11):
-        #print ( token)
+        print ( token)
         file.write(f"\t{token[0]}")
     
     if(gramNum==13):
-        file.write("")
-        file.write(f"\t(13){token}")
+        
+        
+        if(token[1] in varInt):
+            file.write(f"\tscanf(\"%d\",&{token[1]});\n")
+        elif (token[1] in varDouble):
+            file.write(f"\tscanf(\"%lf\",&{token[1]});\n")
+        elif(token[1] in varLit):
+            file.write(f"\tscanf(\"%s\",{token[1]});\n")
+        else:
+            print(f"[ERRO_LEXEMA]\t{getLinhaColuna()}  Variável {token[1]} não conhecido" )
 
-    if(gramNum==14):
-        file.write("")
+    if(gramNum==14):###### fiz bug do "
+        print (token)
+        file.write(f"\tprintf({token[1]}\");\n")
 
     if(gramNum==15):
         file.write("")

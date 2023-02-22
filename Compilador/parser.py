@@ -2,13 +2,13 @@ from scanner import *
 from objeto import *
 import pandas as pd
 
-PRINT_PILHA = True
+PRINT_PILHA = False
 GET_ON_TABLE = False
 REDUCTION_GRAM = True
 REDUCE = False
 SHIFT = False
 TOKEN = False
-FULL_PILHA = True
+FULL_PILHA = False
 LEXEMA = False
 gram = [
     ["P'", "P"],                #1
