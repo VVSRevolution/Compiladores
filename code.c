@@ -1,28 +1,35 @@
 #include<stdio.h>
 typedef char literal[256];
 void main(void){
-	literal	A;
-	int 	G, F, E, D, B;
-	double 	C;
 
+	/*----Variaveis temporarias----*/
+	int T0, T1, T2, T3, T4;
+/*------------------------------*/
+	literal	A;
+	int 	D, B;
+	double 	C;
 
 	printf("Digite B:");
 	scanf("%d",&B);
 	printf("Digite A:");
 	scanf("%s",A);
-	if( B > 2 ) {
-	if( B <= 4 ) {
-	printf("B esta entre 2 e 4");
+	T0 = B > F ;
+	if(T0){
+		T1 = B <= 4 ;
+		if(T1){
+			printf("B esta entre 2 e 4");
+		}
 	}
-	}
-	B = B + 1 ; 
-	B = B + 2 ; 
-	B = B + 3 ; 
-	D = B ; 
-	C = 5.0 ; 
+	T2 = B + 1 ;
+	B = T2;
+	T3 = B + 2 ;
+	B = T3;
+	T4 = B + 3 ;
+	B = T4;
+	D = B;
+	C = 5.0;
 	printf("\nB=\n");
 	printf("%d",D);
-	printf("%d",E);
 	printf("\n");
 	printf("%lf",C);
 	printf("\n");

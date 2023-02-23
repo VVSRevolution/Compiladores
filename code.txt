@@ -1,7 +1,7 @@
 inicio
     varinicio
         literal A;
-        inteiro B, D, E, F, G;
+        inteiro B, D;
         real C;
     varfim;
     escreva "Digite B:";
@@ -22,7 +22,6 @@ D<-B;
 C<-5.0;
 escreva "\nB=\n";
 escreva D;
-escreva E;
 escreva "\n";
 escreva C;
 escreva "\n";

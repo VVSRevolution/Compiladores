@@ -63,7 +63,6 @@ def main():
     while(True):
         
         if((token["classe"]=="EOF" and pilha[-1] == "0")):
-            listVar()
             break
 
 
@@ -88,7 +87,6 @@ def main():
             Action = Tabela.loc[int(UltimoPilha),token['classe']]
 
         if Action == "acc":
-            listVar()
             break
         #print(Action)
         
@@ -170,7 +168,7 @@ def main():
                 Action = Tabela.loc[int(UltimoPilha),token['classe']]
 
             if Action == "acc":
-                listVar() 
+
                 break
             if(GET_ON_TABLE):
                 print(f"GET TABELA3 [{UltimoPilha}] , [{token['classe'] }] = {Action}")
@@ -188,7 +186,6 @@ def main():
             pilha.append(Action[1])
 
         if Action == "acc":
-            listVar()
             break
         if(Action[0] != 'S' and Action[0] != 'R'):
             print(f"[ERRO_PARSER]\t{getLinhaColuna()}\t{Action} nao valida" )
@@ -204,7 +201,8 @@ def main():
         
 if __name__ == "__main__":
     main()
-    returnTabeladesimbulo()
+    listVar()
+    #returnTabeladesimbulo()
     #print(pilha)
 
 
