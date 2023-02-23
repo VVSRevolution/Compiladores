@@ -11,7 +11,7 @@ tabelaDeSimbolos = [{"classe": "inicio", "lexema": "inicio", "tipo": "inicio"},
                     {"classe": "literal", "lexema": "literal", "tipo": "literal"},
                     {"classe": "real", "lexema": "real", "tipo": "real"},
                    ]
-
+allTokens = []
 linha = 1
 coluna = 1
 char = ''
@@ -21,7 +21,7 @@ fileToken = open('tokens.txt', 'w')
 
 def getToken(file):
     
-    global char,coluna,linha
+    global char,coluna,linha,allTokens
 
     if(char==''):
         char = file.read(1) 
@@ -56,6 +56,7 @@ def getToken(file):
     if (token["classe"] != "Comentario"):
         #print(token)
         fileToken.write(f"{token}\n")
+        allTokens.append(token)
         return token
     #print("Classe: " + token["classe"] + ", Lexema: " + token["lexema"] + ", Tipo: " + token["tipo"])
         
@@ -277,4 +278,12 @@ def modTabelaDeSimbolosTipo(lexema,tipo):
         if x["lexema"] == lexema:
             x["tipo"] = tipo
             return True
+    return False
+
+def returnTipoDotoken(lexema):
+    global allTokens
+    for x in allTokens:
+        
+        if x["lexema"] == lexema:
+            return x["tipo"]
     return False

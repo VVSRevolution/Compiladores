@@ -5,6 +5,7 @@ from scanner import *
 varInt  = []
 varDouble  = []
 varLit = []
+ARGfix = []
 ARG = []
 
 def listVar():
@@ -108,12 +109,10 @@ def makeObj(gramNum,token):
         #print(token)
         temp = ['literal', token[0]]
         ARG.append(temp)
-        file.write("")
 
     if(gramNum==16): #num (real ou int)
         temp = ['num', token[0]]
         ARG.append(temp)
-        
     
     if(gramNum==17): #id (variavel)
 
@@ -125,7 +124,42 @@ def makeObj(gramNum,token):
 
 
     if(gramNum==19): # fazer erro
-        file.write("")
+        #print(token)
+        vars = []
+        
+        for x in range(0,len(token),2):
+            temp = returnTipoDotoken(token[x])
+            if(temp == "nulo"):
+                if (token[x] in varInt): vars.append("int")
+                elif (token[x] in varDouble): vars.append("double")
+                elif (token[x] in varDouble): vars.append("lit") (f"[ERRO_LEXEMA]\t{getLinhaColuna()} - Não é possivel operar variavel literal")
+                else: print(f"[ERRO_LEXEMA]\t{getLinhaColuna()} - ERRO INESPERADO - CODIGO 19 - token[x] = [{token[x]}]")
+            elif (temp == False): print(f"[ERRO_LEXEMA]\t{getLinhaColuna()} - ERRO INESPERADO - CODIGO 19 - Função returnTipoDotoken retornou Falso")
+            else: 
+                if(temp == "inteiro"): vars.append("int")
+                elif (temp == "real"): vars.append("double")
+                else: print(f"[ERRO_LEXEMA]\t{getLinhaColuna()} - ERRO INESPERADO - CODIGO 19 - Variavel [{token[x]}] = {temp}, não e possivel operar")
+        
+        ERRO = False
+       
+        for i in range(1,len(vars)):
+            if(vars[0] != vars[i]):
+                ERRO = True
+        
+        if(ERRO):
+            msgErro = ''
+            for x, i in zip(range(0,len(token),2), range(0,len(vars))):
+                msgErro += f"Variavel [{token[x]}] é um [{vars[i]}]; "
+
+            print(f"[ERRO_LEXEMA]\t{getLinhaColuna()} - Tipos diferentes para atribuição -> {msgErro}")
+        else:
+            file.write("\t")
+            for x in range(0,len(token)):
+                if (token[x] == "<-"):
+                    file.write(f"= ")
+                else:
+                    file.write(f"{token[x]} ")
+            file.write("\n")
 
     if(gramNum==20): # fazer erro
         file.write("")

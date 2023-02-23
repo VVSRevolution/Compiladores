@@ -60,7 +60,7 @@
 {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}
 {'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
 {'classe': 'OPA', 'lexema': '+', 'tipo': 'Operador aritmético'}
-{'classe': 'NUM', 'lexema': '3', 'tipo': 'inteiro'}
+{'classe': 'NUM', 'lexema': '3.0', 'tipo': 'real'}
 {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
 {'classe': 'ID', 'lexema': 'D', 'tipo': 'inteiro'}
 {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}
