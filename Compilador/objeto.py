@@ -8,6 +8,7 @@ varLit = []
 ARGfix = []
 ARG = []
 
+
 def listVar():
     global varInt, varDouble, varLit
     print(f"int{varInt}")
@@ -30,7 +31,7 @@ def makeObj(gramNum,token):
 
     if(gramNum==6): ############  A
         file.write(f";\n")
-        #print (token)
+        print (token)
     #if False:
         if (token[0] == "literal"):
             #print("lit")
@@ -54,11 +55,13 @@ def makeObj(gramNum,token):
             print(f"[ERRO_LEXEMA]\t{getLinhaColuna()} Tipo {token[0]} não conhecido" )
         
     
-    if(gramNum==7): ############  B !!!!!!!!!! nao printa o inteiro B arumar no 5
-        # L→ id vir L
-        file.write("")
+    if(gramNum==7): ############  B 
+       # L→ id vir L
+
+        file.write(f", {token[0]}")
 
     if(gramNum==8): ############  C
+        print(token)
         # L→ id
         file.write(f"\t{token[0]}")
 

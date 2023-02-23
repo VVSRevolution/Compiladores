@@ -7,6 +7,12 @@
 {'classe': 'ID', 'lexema': 'B', 'tipo': 'nulo'}
 {'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}
 {'classe': 'ID', 'lexema': 'D', 'tipo': 'nulo'}
+{'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}
+{'classe': 'ID', 'lexema': 'E', 'tipo': 'nulo'}
+{'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}
+{'classe': 'ID', 'lexema': 'F', 'tipo': 'nulo'}
+{'classe': 'VIR', 'lexema': ',', 'tipo': 'Vírgula'}
+{'classe': 'ID', 'lexema': 'G', 'tipo': 'nulo'}
 {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
 {'classe': 'real', 'lexema': 'real', 'tipo': 'real'}
 {'classe': 'ID', 'lexema': 'C', 'tipo': 'nulo'}
@@ -60,7 +66,7 @@
 {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}
 {'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
 {'classe': 'OPA', 'lexema': '+', 'tipo': 'Operador aritmético'}
-{'classe': 'NUM', 'lexema': '3.0', 'tipo': 'real'}
+{'classe': 'NUM', 'lexema': '3', 'tipo': 'inteiro'}
 {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
 {'classe': 'ID', 'lexema': 'D', 'tipo': 'inteiro'}
 {'classe': 'ATR', 'lexema': '<-', 'tipo': 'Atribuição'}
@@ -77,7 +83,7 @@
 {'classe': 'ID', 'lexema': 'D', 'tipo': 'inteiro'}
 {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
 {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
-{'classe': 'ID', 'lexema': 'E', 'tipo': 'nulo'}
+{'classe': 'ID', 'lexema': 'E', 'tipo': 'inteiro'}
 {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
 {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
 {'classe': 'LIT', 'lexema': '\\n', 'tipo': 'Constante Literal'}
