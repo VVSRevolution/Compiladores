@@ -77,6 +77,9 @@
 {'classe': 'ID', 'lexema': 'D', 'tipo': 'inteiro'}
 {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
 {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
+{'classe': 'ID', 'lexema': 'E', 'tipo': 'nulo'}
+{'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
+{'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}
 {'classe': 'LIT', 'lexema': '\\n', 'tipo': 'Constante Literal'}
 {'classe': 'PT_V', 'lexema': ';', 'tipo': 'Ponto e Vírgula'}
 {'classe': 'escreva', 'lexema': 'escreva', 'tipo': 'escreva'}

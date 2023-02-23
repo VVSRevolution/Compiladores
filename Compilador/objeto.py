@@ -5,6 +5,7 @@ from scanner import *
 varInt  = []
 varDouble  = []
 varLit = []
+ARG = []
 
 def listVar():
     global varInt, varDouble, varLit
@@ -20,7 +21,7 @@ def iniciaObj():
 
 def makeObj(gramNum,token):
 
-    global varInt, varDouble, varLit
+    global varInt, varDouble, varLit, ARG
     file = open('code.c', 'a')
 
     if(gramNum==5):
@@ -81,23 +82,47 @@ def makeObj(gramNum,token):
         elif(token[1] in varLit):
             file.write(f"\tscanf(\"%s\",{token[1]});\n")
         else:
-            print(f"[ERRO_LEXEMA]\t{getLinhaColuna()}  Variável {token[1]} não conhecido" )
+            print(f"[ERRO_LEXEMA]\t{getLinhaColuna()} - Variável [{token[1]}] não conhecido" )
 
-    if(gramNum==14):###### arrumar bug do "  ## arrumar bug print variavel
+    if(gramNum==14):####### arrumar bug print variavel
         #print (token)
-        file.write(f"\tprintf(\"{token[1]}\");\n") 
+        #print (ARG)
+        for x in (range(0,len(ARG))):
+            if(ARG[x][1] == token[1]):
+                if(ARG[x][0] == "id"):
+                    if(ARG[x][1] in varInt):
+                        file.write(f"\tprintf(\"%d\",{ARG[x][1]});\n")
+                    elif(ARG[x][1] in varDouble):
+                        file.write(f"\tprintf(\"%lf\",{ARG[x][1]});\n")
+                    elif(token[1] in varLit):
+                        file.write(f"\tprintf(\"%s\",{ARG[x][1]});\n")
+                elif(ARG[x][0] == "num"):
+                    file.write(f"\tprintf(\"%ld\",{ARG[x][1]});\n")
+                elif(ARG[x][0] == "literal"):
+                    file.write(f"\tprintf(\"{token[1]}\");\n") 
+                else:
+                    print(f"[ERRO_LEXEMA]\t{getLinhaColuna()} - Variável [{token[1]}] não conhecido" )
+                ARG.pop()
 
-    if(gramNum==15):
+    if(gramNum==15): #lit
         #print(token)
+        temp = ['literal', token[0]]
+        ARG.append(temp)
         file.write("")
 
-    if(gramNum==16):
-        #print(token)
-        file.write("")
+    if(gramNum==16): #num (real ou int)
+        temp = ['num', token[0]]
+        ARG.append(temp)
+        
     
-    if(gramNum==17): # fazer erro
-        #print(token)
-        file.write("")
+    if(gramNum==17): #id (variavel)
+
+        if not((token[0] in varInt) or (token[0] in varDouble) or (token[0] in varLit)):
+            print(f"[ERRO_LEXEMA]\t{getLinhaColuna()} - Variável [{token[0]}] não declarada")
+        else:
+            temp = ['id', token[0]]
+            ARG.append(temp)
+
 
     if(gramNum==19): # fazer erro
         file.write("")
@@ -118,7 +143,6 @@ def makeObj(gramNum,token):
         file.write("\t}\n")
 
     if(gramNum==26):
-        print(token)
         file.write("\tif( ")
         for i in (range(2,len(token)-1)):   
             file.write(f"{token[i] } ")
