@@ -29,7 +29,7 @@
 {'classe': 'AB_P', 'lexema': '(', 'tipo': 'Abre Parênteses'}
 {'classe': 'ID', 'lexema': 'B', 'tipo': 'inteiro'}
 {'classe': 'OPR', 'lexema': '>', 'tipo': 'Operador relacional'}
-{'classe': 'ID', 'lexema': 'F', 'tipo': 'nulo'}
+{'classe': 'NUM', 'lexema': '2', 'tipo': 'inteiro'}
 {'classe': 'FC_P', 'lexema': ')', 'tipo': 'Fecha Parênteses'}
 {'classe': 'entao', 'lexema': 'entao', 'tipo': 'entao'}
 {'classe': 'se', 'lexema': 'se', 'tipo': 'se'}

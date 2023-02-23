@@ -4,7 +4,7 @@ void main(void){
 
 	/*----Variaveis temporarias----*/
 	int T0, T1, T2, T3, T4;
-/*------------------------------*/
+	/*------------------------------*/
 	literal	A;
 	int 	D, B;
 	double 	C;
@@ -13,7 +13,7 @@ void main(void){
 	scanf("%d",&B);
 	printf("Digite A:");
 	scanf("%s",A);
-	T0 = B > F ;
+	T0 = B > 2 ;
 	if(T0){
 		T1 = B <= 4 ;
 		if(T1){
